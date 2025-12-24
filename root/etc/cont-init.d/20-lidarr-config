@@ -1,0 +1,15 @@
+#!/bin/sh
+# Set up lidarr user and config directory
+
+PUID=${PUID:-1000}
+PGID=${PGID:-1000}
+
+echo "[lidarr] Setting up lidarr user with PUID=$PUID PGID=$PGID"
+
+# Modify lidarr user/group to match requested UID/GID
+pw groupmod lidarr -g "$PGID" 2>/dev/null || true
+
+# Ensure config directory has correct ownership
+chown -R bsd:bsd /config
+
+echo "[lidarr] Configuration complete"
