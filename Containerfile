@@ -4,7 +4,7 @@ FROM ghcr.io/daemonless/arr-base:${BASE_VERSION}
 ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="lidarr chromaprint"
 
-LABEL org.opencontainers.image.title="lidarr" \
+LABEL org.opencontainers.image.title="Lidarr" \
     org.opencontainers.image.description="Lidarr music management on FreeBSD" \
     org.opencontainers.image.source="https://github.com/daemonless/lidarr" \
     org.opencontainers.image.url="https://lidarr.audio/" \
