@@ -85,5 +85,5 @@ when:
   - event: push
     branch: main
     path:
-      exclude: [ "*.md", "docs/**", "LICENSE", ".gitignore" ]
+      exclude: ["*.md", "docs/**", "LICENSE", ".gitignore"]
   - event: manual
