@@ -31,7 +31,7 @@ RUN pkg update && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
 # Download and install Lidarr
-RUN mkdir -p /usr/local/share/lidarr && \
+RUN mkdir -p /usr/local/share/lidarr /config && \
     LIDARR_VERSION=$(fetch -qo - "https://lidarr.servarr.com/v1/update/${LIDARR_BRANCH}/changes?os=bsd&runtime=netcore" | \
     grep -o '"version":"[^"]*"' | head -n 1 | cut -d '"' -f 4) && \
     fetch -qo - "https://lidarr.servarr.com/v1/update/${LIDARR_BRANCH}/updatefile?os=bsd&arch=x64&runtime=netcore" | \
@@ -40,10 +40,7 @@ RUN mkdir -p /usr/local/share/lidarr && \
     chmod +x /usr/local/share/lidarr/Lidarr && \
     chmod -R o+rX /usr/local/share/lidarr && \
     printf "UpdateMethod=docker\nBranch=${LIDARR_BRANCH}\nPackageVersion=%s\nPackageAuthor=[daemonless](https://github.com/daemonless/daemonless)\n" "$LIDARR_VERSION" > /usr/local/share/lidarr/package_info && \
-    mkdir -p /app && echo "$LIDARR_VERSION" > /app/version
-
-# Create config directory
-RUN mkdir -p /config && \
+    mkdir -p /app && echo "$LIDARR_VERSION" > /app/version && \
     chown -R bsd:bsd /usr/local/share/lidarr /config
 
 # Copy service definition and init scripts
