@@ -2,6 +2,7 @@ ARG BASE_VERSION=15
 FROM ghcr.io/daemonless/arr-base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
+ARG PKG_NAME=lidarr
 LABEL org.opencontainers.image.title="Lidarr" \
       org.opencontainers.image.description="Lidarr music management on FreeBSD" \
       org.opencontainers.image.source="https://github.com/daemonless/lidarr" \
@@ -13,16 +14,17 @@ LABEL org.opencontainers.image.title="Lidarr" \
       io.daemonless.port="8686" \
       io.daemonless.arch="${FREEBSD_ARCH}" \
       io.daemonless.volumes="/music,/downloads" \
+      io.daemonless.pkg-name="${PKG_NAME}" \
       org.freebsd.jail.allow.mlock="required"
 
-# Install Lidarr from FreeBSD packages
+# Install from FreeBSD packages
 RUN pkg update && \
-    pkg install -y lidarr && \
+    pkg install -y ${PKG_NAME} && \
     pkg clean -ay && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
 # Override package_info to show container update instructions
-RUN LIDARR_VERSION=$(pkg info lidarr | sed -n 's/.*Version.*: *//p') && \
+RUN LIDARR_VERSION=$(pkg info ${PKG_NAME} | sed -n 's/.*Version.*: *//p') && \
     printf "UpdateMethod=docker\nBranch=master\nPackageVersion=%s\nPackageAuthor=[daemonless](https://github.com/daemonless/daemonless)\n" "$LIDARR_VERSION" > /usr/local/share/lidarr/package_info && \
     mkdir -p /app && echo "$LIDARR_VERSION" > /app/version
 
