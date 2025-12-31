@@ -5,7 +5,7 @@ ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="lidarr chromaprint"
 ARG LIDARR_BRANCH="master"
 ARG UPSTREAM_URL="https://lidarr.servarr.com/v1/update/master/changes?os=bsd"
-ARG UPSTREAM_SED="s/.*\"version\":\"\\([^\"]*\\)\".*/\\1/p"
+ARG UPSTREAM_SED="grep -o '\"version\":\"[^\"]*\"' | head -1 | cut -d'\"' -f4"
 
 LABEL org.opencontainers.image.title="Lidarr" \
     org.opencontainers.image.description="Lidarr music management on FreeBSD" \
@@ -34,7 +34,7 @@ RUN pkg update && \
 # Download and install Lidarr
 RUN mkdir -p /usr/local/share/lidarr /config && \
     LIDARR_VERSION=$(fetch -qo - "https://lidarr.servarr.com/v1/update/${LIDARR_BRANCH}/changes?os=bsd&runtime=netcore" | \
-    sed -n "${UPSTREAM_SED}" | head -1) && \
+    grep -o '"version":"[^"]*"' | head -1 | cut -d'"' -f4) && \
     fetch -qo - "https://lidarr.servarr.com/v1/update/${LIDARR_BRANCH}/updatefile?os=bsd&arch=x64&runtime=netcore" | \
     tar xzf - -C /usr/local/share/lidarr --strip-components=1 && \
     rm -rf /usr/local/share/lidarr/Lidarr.Update && \
