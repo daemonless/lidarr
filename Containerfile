@@ -6,6 +6,9 @@ ARG PACKAGES="lidarr chromaprint"
 ARG LIDARR_BRANCH="master"
 ARG UPSTREAM_URL="https://lidarr.servarr.com/v1/update/master/changes?os=bsd&runtime=netcore"
 ARG UPSTREAM_JQ=".[0].version"
+ARG HEALTHCHECK_ENDPOINT="http://localhost:8686/ping"
+
+ENV HEALTHCHECK_URL="${HEALTHCHECK_ENDPOINT}"
 
 LABEL org.opencontainers.image.title="Lidarr" \
     org.opencontainers.image.description="Lidarr music management on FreeBSD" \
@@ -22,6 +25,7 @@ LABEL org.opencontainers.image.title="Lidarr" \
     io.daemonless.category="Media Management" \
     io.daemonless.upstream-url="${UPSTREAM_URL}" \
     io.daemonless.upstream-jq="${UPSTREAM_JQ}" \
+    io.daemonless.healthcheck-url="${HEALTHCHECK_ENDPOINT}" \
     io.daemonless.packages="${PACKAGES}"
 
 # Install Lidarr and chromaprint (audio fingeprinting)
