@@ -3,6 +3,9 @@ FROM ghcr.io/daemonless/arr-base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="lidarr chromaprint"
+ARG LIDARR_BRANCH="master"
+ARG UPSTREAM_URL="https://lidarr.servarr.com/v1/update/master/changes?os=bsd"
+ARG UPSTREAM_SED="s/.*\"version\":\"\\([^\"]*\\)\".*/\\1/p"
 
 LABEL org.opencontainers.image.title="Lidarr" \
     org.opencontainers.image.description="Lidarr music management on FreeBSD" \
@@ -17,11 +20,9 @@ LABEL org.opencontainers.image.title="Lidarr" \
     io.daemonless.volumes="/music,/downloads" \
     org.freebsd.jail.allow.mlock="required" \
     io.daemonless.category="Media Management" \
-    io.daemonless.upstream-mode="servarr" \
-    io.daemonless.upstream-url="https://lidarr.servarr.com/v1/update/master/changes?os=bsd" \
+    io.daemonless.upstream-url="${UPSTREAM_URL}" \
+    io.daemonless.upstream-sed="${UPSTREAM_SED}" \
     io.daemonless.packages="${PACKAGES}"
-
-ARG LIDARR_BRANCH="master"
 
 # Install Lidarr and chromaprint (audio fingeprinting)
 RUN pkg update && \
@@ -33,7 +34,7 @@ RUN pkg update && \
 # Download and install Lidarr
 RUN mkdir -p /usr/local/share/lidarr /config && \
     LIDARR_VERSION=$(fetch -qo - "https://lidarr.servarr.com/v1/update/${LIDARR_BRANCH}/changes?os=bsd&runtime=netcore" | \
-    grep -o '"version":"[^"]*"' | head -n 1 | cut -d '"' -f 4) && \
+    sed -n "${UPSTREAM_SED}" | head -1) && \
     fetch -qo - "https://lidarr.servarr.com/v1/update/${LIDARR_BRANCH}/updatefile?os=bsd&arch=x64&runtime=netcore" | \
     tar xzf - -C /usr/local/share/lidarr --strip-components=1 && \
     rm -rf /usr/local/share/lidarr/Lidarr.Update && \
