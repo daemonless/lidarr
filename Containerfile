@@ -4,7 +4,8 @@ FROM ghcr.io/daemonless/arr-base:${BASE_VERSION}
 ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="lidarr chromaprint"
 ARG LIDARR_BRANCH="master"
-ARG UPSTREAM_URL="https://lidarr.servarr.com/v1/update/master/changes?os=bsd&runtime=netcore"
+ARG UPSTREAM_URL="https://lidarr.servarr.com/v1/update/${LIDARR_BRANCH}/changes?os=bsd&runtime=netcore"
+ARG DOWNLOAD_URL="https://lidarr.servarr.com/v1/update/${LIDARR_BRANCH}/updatefile?os=bsd&arch=x64&runtime=netcore"
 ARG UPSTREAM_JQ=".[0].version"
 ARG HEALTHCHECK_ENDPOINT="http://localhost:8686/ping"
 
@@ -36,17 +37,8 @@ RUN pkg update && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
 # Download and install Lidarr
-RUN mkdir -p /usr/local/share/lidarr /config && \
-    LIDARR_VERSION=$(fetch -qo - "https://lidarr.servarr.com/v1/update/${LIDARR_BRANCH}/changes?os=bsd&runtime=netcore" | \
-    grep -o '"version":"[^"]*"' | head -1 | cut -d'"' -f4) && \
-    fetch -qo - "https://lidarr.servarr.com/v1/update/${LIDARR_BRANCH}/updatefile?os=bsd&arch=x64&runtime=netcore" | \
-    tar xzf - -C /usr/local/share/lidarr --strip-components=1 && \
-    rm -rf /usr/local/share/lidarr/Lidarr.Update && \
-    chmod +x /usr/local/share/lidarr/Lidarr && \
-    chmod -R o+rX /usr/local/share/lidarr && \
-    printf "UpdateMethod=docker\nBranch=${LIDARR_BRANCH}\nPackageVersion=%s\nPackageAuthor=[daemonless](https://github.com/daemonless/daemonless)\n" "$LIDARR_VERSION" > /usr/local/share/lidarr/package_info && \
-    mkdir -p /app && echo "$LIDARR_VERSION" > /app/version && \
-    chown -R bsd:bsd /usr/local/share/lidarr /config
+RUN LIDARR_VERSION=$(fetch -qo - "${UPSTREAM_URL}" | grep -o '"version":"[^"]*"' | head -1 | cut -d'"' -f4) && \
+    install-arr.sh "lidarr" "Lidarr" "$LIDARR_VERSION" "${DOWNLOAD_URL}" "${LIDARR_BRANCH}"
 
 # Copy service definition and init scripts
 COPY root/ /
