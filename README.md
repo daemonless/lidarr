@@ -1,41 +1,17 @@
-# lidarr
+# Lidarr
 
-Music collection manager for Usenet and BitTorrent users.
+Lidarr music management on FreeBSD.
 
-## Environment Variables
+| | |
+|---|---|
+| **Port** | 8686 |
+| **Registry** | `ghcr.io/daemonless/lidarr` |
+| **Source** | [https://github.com/Lidarr/Lidarr](https://github.com/Lidarr/Lidarr) |
+| **Website** | [https://lidarr.audio/](https://lidarr.audio/) |
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `PUID` | User ID for the application process | `1000` |
-| `PGID` | Group ID for the application process | `1000` |
-| `TZ` | Timezone for the container | `UTC` |
-| `S6_LOG_ENABLE` | Enable/Disable file logging | `1` |
-| `S6_LOG_MAX_SIZE` | Max size per log file (bytes) | `1048576` |
-| `S6_LOG_MAX_FILES` | Number of rotated log files to keep | `10` |
+## Deployment
 
-## Logging
-
-This image uses `s6-log` for internal log rotation.
-- **System Logs**: Captured from console and stored at `/config/logs/daemonless/lidarr/`.
-- **Application Logs**: Managed by the app and typically found in `/config/logs/`.
-- **Podman Logs**: Output is mirrored to the console, so `podman logs` still works.
-
-## Quick Start
-
-```bash
-podman run -d --name lidarr \
-  -p 8686:8686 \
-  --annotation 'org.freebsd.jail.allow.mlock=true' \
-  -e PUID=1000 -e PGID=1000 \
-  -v /path/to/config:/config \
-  -v /path/to/music:/music \
-  -v /path/to/downloads:/downloads \
-  ghcr.io/daemonless/lidarr:latest
-```
-
-Access at: http://localhost:8686
-
-## podman-compose
+### Podman Compose
 
 ```yaml
 services:
@@ -45,11 +21,11 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=America/New_York
+      - TZ=UTC
     volumes:
-      - /data/config/lidarr:/config
-      - /data/media/music:/music
-      - /data/downloads:/downloads
+      - /path/to/containers/lidarr:/config
+      - /path/to/music:/music # optional
+      - /path/to/downloads:/downloads # optional
     ports:
       - 8686:8686
     annotations:
@@ -57,45 +33,71 @@ services:
     restart: unless-stopped
 ```
 
-## Tags
+### Podman CLI
 
-| Tag | Source | Description |
-|-----|--------|-------------|
-| `:latest` | [Upstream Releases](https://lidarr.servarr.com/) | Latest upstream release |
-| `:pkg` | `net-p2p/lidarr` | FreeBSD quarterly packages |
-| `:pkg-latest` | `net-p2p/lidarr` | FreeBSD latest packages |
+```bash
+podman run -d --name lidarr \
+  -p 8686:8686 \
+  --annotation 'org.freebsd.jail.allow.mlock=true' \
+  -e PUID=@PUID@ \
+  -e PGID=@PGID@ \
+  -e TZ=@TZ@ \
+  -v /path/to/containers/lidarr:/config \ 
+  -v /path/to/music:/music \  # optional
+  -v /path/to/downloads:/downloads \  # optional
+  ghcr.io/daemonless/lidarr:latest
+```
+Access at: `http://localhost:8686`
 
-## Environment Variables
+### Ansible
+
+```yaml
+- name: Deploy lidarr
+  containers.podman.podman_container:
+    name: lidarr
+    image: ghcr.io/daemonless/lidarr:latest
+    state: started
+    restart_policy: always
+    env:
+      PUID: "1000"
+      PGID: "1000"
+      TZ: "UTC"
+    ports:
+      - "8686:8686"
+    volumes:
+      - "/path/to/containers/lidarr:/config"
+      - "/path/to/music:/music" # optional
+      - "/path/to/downloads:/downloads" # optional
+    annotation:
+      org.freebsd.jail.allow.mlock: "true"
+```
+
+## Configuration
+
+### Environment Variables
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `PUID` | 1000 | User ID for app |
-| `PGID` | 1000 | Group ID for app |
-| `TZ` | UTC | Timezone |
+| `PUID` | `1000` | User ID for the application process |
+| `PGID` | `1000` | Group ID for the application process |
+| `TZ` | `UTC` | Timezone for the container |
 
-## Volumes
+### Volumes
 
 | Path | Description |
 |------|-------------|
 | `/config` | Configuration directory |
-| `/music` | Music library |
-| `/downloads` | Download directory |
+| `/music` | Music library (Optional) |
+| `/downloads` | Download directory (Optional) |
 
-## Ports
+### Ports
 
-| Port | Description |
-|------|-------------|
-| 8686 | Web UI |
+| Port | Protocol | Description |
+|------|----------|-------------|
+| `8686` | TCP | Web UI |
 
 ## Notes
 
-- **User:** `bsd` (UID/GID set via PUID/PGID, default 1000)
-- **Base:** Built on `ghcr.io/daemonless/base-image` (FreeBSD)
-
-### Specific Requirements
-- **.NET App:** Requires `--annotation 'org.freebsd.jail.allow.mlock=true'` (Requires [patched ocijail](https://github.com/daemonless/daemonless#ocijail-patch))
-
-## Links
-
-- [Website](https://lidarr.audio/)
-- [FreshPorts](https://www.freshports.org/net-p2p/lidarr/)
+- **User:** `bsd` (UID/GID set via PUID/PGID)
+- **Base:** Built on `ghcr.io/daemonless/base` (FreeBSD)
+- **.NET App:** Requires `--annotation 'org.freebsd.jail.allow.mlock=true'` and a [patched ocijail](https://daemonless.io/guides/ocijail-patch).

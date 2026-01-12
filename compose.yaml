@@ -1,0 +1,50 @@
+name: lidarr
+
+x-daemonless:
+  title: "Lidarr"
+  icon: ":material-music:"
+  category: "Media Management"
+  description: "Lidarr music management on FreeBSD."
+  upstream_url: "https://github.com/Lidarr/Lidarr"
+  web_url: "https://lidarr.audio/"
+  freshports_url: "https://www.freshports.org/net-p2p/lidarr/"
+  user: "bsd"
+  mlock: true
+  
+  docs:
+    env:
+      PUID: "User ID for the application process"
+      PGID: "Group ID for the application process"
+      TZ: "Timezone for the container"
+    volumes:
+      /config: "Configuration directory"
+      /music:
+        desc: "Music library"
+        optional: true
+      /downloads:
+        desc: "Download directory"
+        optional: true
+    ports:
+      8686: "Web UI"
+
+services:
+  lidarr:
+    image: ghcr.io/daemonless/lidarr:latest
+    container_name: lidarr
+    restart: unless-stopped
+    
+    annotations:
+      org.freebsd.jail.allow.mlock: "true"
+
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+
+    volumes:
+      - /path/to/containers/lidarr:/config
+      - /path/to/music:/music
+      - /path/to/downloads:/downloads
+
+    ports:
+      - 8686:8686
