@@ -11,6 +11,7 @@ Lidarr music management on FreeBSD.
 |---|---|
 | **Port** | 8686 |
 | **Registry** | `ghcr.io/daemonless/lidarr` |
+| **Docs** | [daemonless.io/images/lidarr](https://daemonless.io/images/lidarr/) |
 | **Source** | [https://github.com/Lidarr/Lidarr](https://github.com/Lidarr/Lidarr) |
 | **Website** | [https://lidarr.audio/](https://lidarr.audio/) |
 
