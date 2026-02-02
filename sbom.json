@@ -1,11 +1,11 @@
 {
   "image": "lidarr",
-  "generated": "2026-02-01T22:45:44Z",
+  "generated": "2026-02-02T13:44:39Z",
   "tags": {
     "latest": {
       "app_version": "3.1.0.4875",
       "source": "upstream-binary",
-      "generated": "2026-02-01T22:34:10Z",
+      "generated": "2026-02-02T13:37:45Z",
       "packages": {
         "freebsd": [
           {
@@ -682,7 +682,7 @@
     "pkg-latest": {
       "app_version": "3.1.0.4875",
       "source": "freebsd-latest",
-      "generated": "2026-02-01T22:36:46Z",
+      "generated": "2026-02-02T13:35:03Z",
       "packages": {
         "freebsd": [
           {
@@ -935,7 +935,7 @@
           },
           {
             "name": "harfbuzz",
-            "version": "12.3.0"
+            "version": "12.3.2"
           },
           {
             "name": "highway",
@@ -975,7 +975,7 @@
           },
           {
             "name": "lcms2",
-            "version": "2.17"
+            "version": "2.18"
           },
           {
             "name": "lerc",
@@ -1223,7 +1223,7 @@
           },
           {
             "name": "png",
-            "version": "1.6.53"
+            "version": "1.6.54"
           },
           {
             "name": "py311-boost-libs",
@@ -1359,7 +1359,7 @@
     "pkg": {
       "app_version": "2.13.3.4711_1",
       "source": "freebsd-quarterly",
-      "generated": "2026-02-01T22:37:38Z",
+      "generated": "2026-02-02T13:34:52Z",
       "packages": {
         "freebsd": [
           {
