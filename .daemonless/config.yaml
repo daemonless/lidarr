@@ -2,3 +2,15 @@ icon: ':material-music:'
 cit:
   mode: screenshot
   port: 8686
+
+build:
+  variants:
+    - tag: latest
+      containerfile: Containerfile
+      default: true
+    - tag: pkg
+      containerfile: Containerfile.pkg
+    - tag: pkg-latest
+      containerfile: Containerfile.pkg
+      args:
+        BASE_VERSION: "15-latest"
