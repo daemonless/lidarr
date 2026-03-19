@@ -4,13 +4,14 @@ x-daemonless:
   title: "Lidarr"
   icon: ":material-music:"
   category: "Media Management"
-  description: "Lidarr music management on FreeBSD."
+  description: "Music collection manager for Usenet and BitTorrent users — monitors RSS feeds, grabs, sorts, and renames tracks from your favorite artists."
   upstream_url: "https://github.com/Lidarr/Lidarr"
   web_url: "https://lidarr.audio/"
   freshports_url: "https://www.freshports.org/net-p2p/lidarr/"
   user: "bsd"
   mlock: true
-  
+  appjail: true
+
   docs:
     env:
       PUID: "User ID for the application process"

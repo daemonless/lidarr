@@ -19,7 +19,7 @@ ENV HEALTHCHECK_URL="${HEALTHCHECK_ENDPOINT}"
 
 # --- Metadata (Injected by Generator) ---
 LABEL org.opencontainers.image.title="Lidarr" \
-      org.opencontainers.image.description="Lidarr music management on FreeBSD." \
+      org.opencontainers.image.description="Music collection manager for Usenet and BitTorrent users — monitors RSS feeds, grabs, sorts, and renames tracks from your favorite artists." \
       org.opencontainers.image.source="https://github.com/daemonless/lidarr" \
       org.opencontainers.image.url="https://lidarr.audio/" \
       org.opencontainers.image.documentation="https://wiki.servarr.com/lidarr" \
