@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-18T00:12:35Z",
+  "generated": "2026-05-02T12:51:52Z",
   "image": "lidarr",
   "tags": {
     "latest": {
       "app_version": "3.1.0.4875",
       "arch": "amd64",
-      "generated": "2026-04-18T00:11:17Z",
+      "generated": "2026-05-02T12:50:32Z",
       "packages": {
         "dotnet": [
           {
@@ -85,6 +85,10 @@
             "version": "8.0.6"
           },
           {
+            "name": "Lidarr",
+            "version": "1.0.0"
+          },
+          {
             "name": "Lidarr.Api.V1",
             "version": "1.0.0"
           },
@@ -106,10 +110,6 @@
           },
           {
             "name": "Lidarr.Mono",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Lidarr.SignalR",
             "version": "1.0.0"
           },
           {
@@ -604,11 +604,11 @@
           },
           {
             "name": "FreeBSD-openssl",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-openssl-lib",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-pkg-bootstrap",
@@ -620,7 +620,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0"
+            "version": "15.0p6"
           },
           {
             "name": "FreeBSD-runtime-lib32",
@@ -704,7 +704,7 @@
           },
           {
             "name": "execline",
-            "version": "2.9.7.0"
+            "version": "2.9.8.1"
           },
           {
             "name": "expat",
@@ -736,7 +736,7 @@
           },
           {
             "name": "gettext-runtime",
-            "version": "0.26"
+            "version": "1.0"
           },
           {
             "name": "giflib",
@@ -800,7 +800,7 @@
           },
           {
             "name": "lcms2",
-            "version": "2.18"
+            "version": "2.19"
           },
           {
             "name": "lerc",
@@ -1072,11 +1072,7 @@
           },
           {
             "name": "s6",
-            "version": "2.13.2.0"
-          },
-          {
-            "name": "s6-rc",
-            "version": "0.5.6.0"
+            "version": "2.14.0.1"
           },
           {
             "name": "shaderc",
@@ -1088,7 +1084,7 @@
           },
           {
             "name": "skalibs",
-            "version": "2.14.4.0"
+            "version": "2.14.5.1"
           },
           {
             "name": "sqlite3",
@@ -1196,7 +1192,7 @@
       "source": "upstream",
       "summary": {
         "dotnet": 125,
-        "freebsd": 164,
+        "freebsd": 163,
         "go": 0,
         "java": 0,
         "node": 1,
@@ -1204,13 +1200,13 @@
         "python": 3,
         "ruby": 0,
         "rust": 0,
-        "total": 293
+        "total": 292
       }
     },
     "pkg": {
       "app_version": "3.1.0.4875",
       "arch": "amd64",
-      "generated": "2026-04-18T00:10:04Z",
+      "generated": "2026-05-02T12:49:40Z",
       "packages": {
         "dotnet": [
           {
@@ -1302,7 +1298,7 @@
             "version": "1.0.0"
           },
           {
-            "name": "Lidarr.SignalR",
+            "name": "Lidarr.Http",
             "version": "1.0.0"
           },
           {
@@ -1797,11 +1793,11 @@
           },
           {
             "name": "FreeBSD-openssl",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-openssl-lib",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-pkg-bootstrap",
@@ -1813,7 +1809,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0"
+            "version": "15.0p6"
           },
           {
             "name": "FreeBSD-runtime-lib32",
@@ -1897,7 +1893,7 @@
           },
           {
             "name": "execline",
-            "version": "2.9.7.0"
+            "version": "2.9.8.1"
           },
           {
             "name": "expat",
@@ -1929,7 +1925,7 @@
           },
           {
             "name": "gettext-runtime",
-            "version": "0.26"
+            "version": "1.0"
           },
           {
             "name": "giflib",
@@ -1993,7 +1989,7 @@
           },
           {
             "name": "lcms2",
-            "version": "2.18"
+            "version": "2.19"
           },
           {
             "name": "lerc",
@@ -2265,11 +2261,7 @@
           },
           {
             "name": "s6",
-            "version": "2.13.2.0"
-          },
-          {
-            "name": "s6-rc",
-            "version": "0.5.6.0"
+            "version": "2.14.0.1"
           },
           {
             "name": "shaderc",
@@ -2281,7 +2273,7 @@
           },
           {
             "name": "skalibs",
-            "version": "2.14.4.0"
+            "version": "2.14.5.1"
           },
           {
             "name": "sqlite3",
@@ -2389,7 +2381,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 122,
-        "freebsd": 164,
+        "freebsd": 163,
         "go": 0,
         "java": 0,
         "node": 1,
@@ -2397,13 +2389,13 @@
         "python": 3,
         "ruby": 0,
         "rust": 0,
-        "total": 290
+        "total": 289
       }
     },
     "pkg-latest": {
       "app_version": "3.1.0.4875",
       "arch": "amd64",
-      "generated": "2026-04-18T00:10:28Z",
+      "generated": "2026-05-02T12:49:19Z",
       "packages": {
         "dotnet": [
           {
@@ -2483,19 +2475,15 @@
             "version": "8.0.6"
           },
           {
-            "name": "Lidarr",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Lidarr.Api.V1",
-            "version": "1.0.0"
-          },
-          {
             "name": "Lidarr.Common",
             "version": "1.0.0"
           },
           {
             "name": "Lidarr.Core",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Lidarr.Host",
             "version": "1.0.0"
           },
           {
@@ -2998,11 +2986,11 @@
           },
           {
             "name": "FreeBSD-openssl",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-openssl-lib",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-pkg-bootstrap",
@@ -3014,7 +3002,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0"
+            "version": "15.0p6"
           },
           {
             "name": "FreeBSD-runtime-lib32",
@@ -3102,7 +3090,7 @@
           },
           {
             "name": "expat",
-            "version": "2.7.5"
+            "version": "2.8.0"
           },
           {
             "name": "ffmpeg",
@@ -3130,7 +3118,7 @@
           },
           {
             "name": "gettext-runtime",
-            "version": "0.26"
+            "version": "1.0"
           },
           {
             "name": "giflib",
@@ -3158,7 +3146,7 @@
           },
           {
             "name": "highway",
-            "version": "1.3.0"
+            "version": "1.4.0"
           },
           {
             "name": "hwdata",
@@ -3194,7 +3182,7 @@
           },
           {
             "name": "lcms2",
-            "version": "2.18"
+            "version": "2.19"
           },
           {
             "name": "lerc",
@@ -3202,7 +3190,7 @@
           },
           {
             "name": "libX11",
-            "version": "1.8.13,1"
+            "version": "1.8.13_1,1"
           },
           {
             "name": "libXau",
@@ -3310,7 +3298,7 @@
           },
           {
             "name": "librsvg2-rust",
-            "version": "2.62.0_1"
+            "version": "2.62.0_2"
           },
           {
             "name": "libtasn1",
@@ -3330,7 +3318,7 @@
           },
           {
             "name": "libunibreak",
-            "version": "6.1,1"
+            "version": "7.0,1"
           },
           {
             "name": "libunistring",
@@ -3370,7 +3358,7 @@
           },
           {
             "name": "libxml2",
-            "version": "2.15.2_1"
+            "version": "2.15.3"
           },
           {
             "name": "lidarr",
@@ -3378,11 +3366,11 @@
           },
           {
             "name": "lzo2",
-            "version": "2.10_1"
+            "version": "2.10_2"
           },
           {
             "name": "mpc",
-            "version": "1.4.0"
+            "version": "1.4.1"
           },
           {
             "name": "mpdecimal",
@@ -3406,15 +3394,15 @@
           },
           {
             "name": "openexr",
-            "version": "3.4.9"
+            "version": "3.4.10_1"
           },
           {
             "name": "openjph",
-            "version": "0.26.3"
+            "version": "0.27.0"
           },
           {
             "name": "openssl",
-            "version": "3.0.19,1"
+            "version": "3.0.20,1"
           },
           {
             "name": "opus",
@@ -3438,11 +3426,11 @@
           },
           {
             "name": "pkg",
-            "version": "2.7.3"
+            "version": "2.7.5"
           },
           {
             "name": "png",
-            "version": "1.6.57"
+            "version": "1.6.58"
           },
           {
             "name": "py311-boost-libs",
@@ -3454,7 +3442,7 @@
           },
           {
             "name": "py311-packaging",
-            "version": "26.0"
+            "version": "26.1"
           },
           {
             "name": "python311",
@@ -3469,12 +3457,8 @@
             "version": "2.14.0.1"
           },
           {
-            "name": "s6-rc",
-            "version": "0.6.0.0"
-          },
-          {
             "name": "shaderc",
-            "version": "2026.1"
+            "version": "2026.2"
           },
           {
             "name": "shared-mime-info",
@@ -3553,7 +3537,7 @@
           },
           {
             "name": "packaging",
-            "version": "26.0"
+            "version": "26.1"
           }
         ],
         "ruby": [],
@@ -3561,8 +3545,8 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 124,
-        "freebsd": 157,
+        "dotnet": 123,
+        "freebsd": 156,
         "go": 0,
         "java": 0,
         "node": 1,
@@ -3570,7 +3554,7 @@
         "python": 3,
         "ruby": 0,
         "rust": 0,
-        "total": 285
+        "total": 283
       }
     }
   }
