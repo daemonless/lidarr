@@ -2,6 +2,7 @@ icon: ':material-music:'
 cit:
   mode: screenshot
   port: 8686
+  wait: 600
 
 build:
   variants:
