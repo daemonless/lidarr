@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-08T17:58:54Z",
+  "generated": "2026-05-20T22:44:28Z",
   "image": "lidarr",
   "tags": {
     "latest": {
       "app_version": "3.1.0.4875",
       "arch": "amd64",
-      "generated": "2026-05-08T17:55:54Z",
+      "generated": "2026-05-20T22:41:05Z",
       "packages": {
         "dotnet": [
           {
@@ -83,10 +83,6 @@
           {
             "name": "ImpromptuInterface",
             "version": "8.0.6"
-          },
-          {
-            "name": "Lidarr.Api.V1",
-            "version": "1.0.0"
           },
           {
             "name": "Lidarr.Common",
@@ -700,7 +696,7 @@
           },
           {
             "name": "expat",
-            "version": "2.7.5"
+            "version": "2.8.1"
           },
           {
             "name": "ffmpeg",
@@ -1183,7 +1179,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 123,
+        "dotnet": 122,
         "freebsd": 163,
         "go": 0,
         "java": 0,
@@ -1192,13 +1188,13 @@
         "python": 3,
         "ruby": 0,
         "rust": 0,
-        "total": 290
+        "total": 289
       }
     },
     "pkg": {
       "app_version": "3.1.0.4875",
       "arch": "amd64",
-      "generated": "2026-05-08T17:57:39Z",
+      "generated": "2026-05-20T22:41:21Z",
       "packages": {
         "dotnet": [
           {
@@ -1278,10 +1274,6 @@
             "version": "8.0.6"
           },
           {
-            "name": "Lidarr.Api.V1",
-            "version": "1.0.0"
-          },
-          {
             "name": "Lidarr.Common",
             "version": "1.0.0"
           },
@@ -1291,6 +1283,10 @@
           },
           {
             "name": "Lidarr.Http",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Lidarr.Mono",
             "version": "1.0.0"
           },
           {
@@ -1893,7 +1889,7 @@
           },
           {
             "name": "expat",
-            "version": "2.7.5"
+            "version": "2.8.1"
           },
           {
             "name": "ffmpeg",
@@ -2391,7 +2387,7 @@
     "pkg-latest": {
       "app_version": "3.1.0.4875",
       "arch": "amd64",
-      "generated": "2026-05-08T17:55:59Z",
+      "generated": "2026-05-20T22:43:17Z",
       "packages": {
         "dotnet": [
           {
@@ -2471,19 +2467,15 @@
             "version": "8.0.6"
           },
           {
-            "name": "Lidarr",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Lidarr.Api.V1",
-            "version": "1.0.0"
-          },
-          {
             "name": "Lidarr.Common",
             "version": "1.0.0"
           },
           {
             "name": "Lidarr.Core",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Lidarr.Host",
             "version": "1.0.0"
           },
           {
@@ -3038,7 +3030,7 @@
           },
           {
             "name": "aom",
-            "version": "3.13.3"
+            "version": "3.14.0"
           },
           {
             "name": "bash",
@@ -3086,11 +3078,11 @@
           },
           {
             "name": "expat",
-            "version": "2.8.0"
+            "version": "2.8.1"
           },
           {
             "name": "ffmpeg",
-            "version": "8.1,1"
+            "version": "8.1.1,1"
           },
           {
             "name": "fontconfig",
@@ -3146,7 +3138,7 @@
           },
           {
             "name": "hwdata",
-            "version": "0.406,1"
+            "version": "0.407,1"
           },
           {
             "name": "icu",
@@ -3178,7 +3170,7 @@
           },
           {
             "name": "lcms2",
-            "version": "2.19"
+            "version": "2.19.1"
           },
           {
             "name": "lerc",
@@ -3198,7 +3190,7 @@
           },
           {
             "name": "libXext",
-            "version": "1.3.6,1"
+            "version": "1.3.7,1"
           },
           {
             "name": "libXfixes",
@@ -3238,7 +3230,7 @@
           },
           {
             "name": "libdrm",
-            "version": "2.4.131,1"
+            "version": "2.4.133,1"
           },
           {
             "name": "libdvdnav",
@@ -3386,7 +3378,7 @@
           },
           {
             "name": "openblas",
-            "version": "0.3.30,2"
+            "version": "0.3.33,2"
           },
           {
             "name": "openexr",
@@ -3394,7 +3386,7 @@
           },
           {
             "name": "openjph",
-            "version": "0.27.0"
+            "version": "0.27.2"
           },
           {
             "name": "openssl",
@@ -3434,7 +3426,7 @@
           },
           {
             "name": "py311-numpy",
-            "version": "2.4.4_2,1"
+            "version": "2.4.4_3,1"
           },
           {
             "name": "py311-packaging",
@@ -3486,7 +3478,7 @@
           },
           {
             "name": "vulkan-loader",
-            "version": "1.4.350"
+            "version": "1.4.350.0"
           },
           {
             "name": "wayland",
@@ -3581,7 +3573,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 123,
+        "dotnet": 122,
         "freebsd": 156,
         "go": 0,
         "java": 0,
@@ -3590,7 +3582,7 @@
         "python": 3,
         "ruby": 0,
         "rust": 0,
-        "total": 293
+        "total": 292
       }
     }
   }
