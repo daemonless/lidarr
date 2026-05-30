@@ -3,6 +3,7 @@ cit:
   mode: screenshot
   port: 8686
   wait: 600
+  screenshot_wait: 10
 
 build:
   variants:
