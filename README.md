@@ -7,6 +7,7 @@ Source: dbuild templates
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/daemonless/lidarr/build.yaml?style=flat-square&label=Build&color=green)](https://github.com/daemonless/lidarr/actions)
 [![Last Commit](https://img.shields.io/github/last-commit/daemonless/lidarr?style=flat-square&label=Last+Commit&color=blue)](https://github.com/daemonless/lidarr/commits)
+[![mlock Required](https://img.shields.io/badge/mlock-required-orange?style=flat-square&logo=freebsd&logoColor=white)](https://daemonless.io/guides/ocijail-patch/)
 
 Music collection manager for Usenet and BitTorrent users — monitors RSS feeds, grabs, sorts, and renames tracks from your favorite artists.
 
@@ -36,18 +37,18 @@ Before deploying, ensure your host environment is ready. See the [Quick Start Gu
 ```yaml
 services:
   lidarr:
-    image: ghcr.io/daemonless/lidarr:latest
+    image: "ghcr.io/daemonless/lidarr:latest"
     container_name: lidarr
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=UTC
+      - PUID=1000  # User ID for the application process
+      - PGID=1000  # Group ID for the application process
+      - TZ=UTC  # Timezone for the container
     volumes:
       - "/path/to/containers/lidarr:/config"
       - "/path/to/music:/music" # optional
       - "/path/to/downloads:/downloads" # optional
     ports:
-      - 8686:8686
+      - "8686:8686"
     annotations:
       org.freebsd.jail.allow.mlock: "true"
     restart: unless-stopped
@@ -125,7 +126,7 @@ podman run -d --name lidarr \
 - name: Deploy lidarr
   containers.podman.podman_container:
     name: lidarr
-    image: ghcr.io/daemonless/lidarr:latest
+    image: "ghcr.io/daemonless/lidarr:latest"
     state: started
     restart_policy: always
     env:
