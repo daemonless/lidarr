@@ -19,15 +19,14 @@ Music collection manager for Usenet and BitTorrent users — monitors RSS feeds,
 | **Website** | [https://lidarr.audio/](https://lidarr.audio/) |
 
 ## Version Tags
-
 | Tag | Description | Best For |
 | :--- | :--- | :--- |
 | `latest` | **Upstream Binary**. Built from official release. | Most users. Matches Linux Docker behavior. |
+| `nightly` | **Nightly branch** — required for plugin support (adds the `/system/plugins` menu). One-way DB migrations; back up /config before switching back to release. | Alternative build. |
 | `pkg` | **FreeBSD Quarterly**. Uses stable, tested packages. | Production stability. |
 | `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
 
 ## Prerequisites
-
 Before deploying, ensure your host environment is ready. See the [Quick Start Guide](https://daemonless.io/guides/quick-start) for host setup instructions.
 
 ## Deployment
@@ -55,10 +54,11 @@ services:
 ```
 
 ### AppJail Director
-
 **.env**:
 
 ```
+# .env
+
 DIRECTOR_PROJECT=lidarr
 PUID=1000
 PGID=1000
@@ -68,6 +68,8 @@ TZ=UTC
 **appjail-director.yml**:
 
 ```yaml
+# appjail-director.yml
+
 options:
   - virtualnet: ':<random> default'
   - nat:
@@ -76,7 +78,7 @@ services:
     name: lidarr
     options:
       - container: 'boot args:--pull'
-      - expose="8686:8686 proto:tcp" \
+      - expose: '8686:8686 proto:tcp' \
     oci:
       user: root
       environment:
@@ -99,6 +101,8 @@ volumes:
 **Makejail**:
 
 ```
+# Makejail
+
 ARG tag=latest
 
 OPTION overwrite=force

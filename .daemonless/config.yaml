@@ -10,9 +10,14 @@ build:
     - tag: latest
       containerfile: Containerfile
       default: true
+    - tag: nightly
+      containerfile: Containerfile
+      args:
+        LIDARR_BRANCH: nightly
+      tag_desc: "**Nightly branch** — required for plugin support (adds the `/system/plugins` menu). One-way DB migrations; back up /config before switching back to release."
     - tag: pkg
       containerfile: Containerfile.pkg
     - tag: pkg-latest
       containerfile: Containerfile.pkg
       args:
-        BASE_VERSION: "15-latest"
+        BASE_VERSION: "15.1-latest"
