@@ -1,11 +1,11 @@
 {
-  "generated": "2026-06-21T12:21:34Z",
+  "generated": "2026-07-07T08:55:18Z",
   "image": "lidarr",
   "tags": {
     "latest": {
       "app_version": "3.1.0.4875",
       "arch": "amd64",
-      "generated": "2026-06-21T12:20:19Z",
+      "generated": "2026-07-07T08:50:12Z",
       "packages": {
         "dotnet": [
           {
@@ -97,7 +97,11 @@
             "version": "1.0.0"
           },
           {
-            "name": "Lidarr.Http",
+            "name": "Lidarr.Host",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Lidarr.Mono",
             "version": "1.0.0"
           },
           {
@@ -520,11 +524,11 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-clibs-lib32",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -616,11 +620,11 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-runtime-lib32",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -632,7 +636,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -640,7 +644,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-zlib",
@@ -660,7 +664,7 @@
           },
           {
             "name": "aom",
-            "version": "3.13.3"
+            "version": "3.14.1"
           },
           {
             "name": "bash",
@@ -1012,7 +1016,7 @@
           },
           {
             "name": "openexr",
-            "version": "3.4.12"
+            "version": "3.4.13"
           },
           {
             "name": "openjph",
@@ -1064,7 +1068,7 @@
           },
           {
             "name": "python311",
-            "version": "3.11.15_3"
+            "version": "3.11.15_4"
           },
           {
             "name": "readline",
@@ -1191,7 +1195,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 123,
+        "dotnet": 124,
         "freebsd": 165,
         "go": 0,
         "java": 0,
@@ -1200,13 +1204,13 @@
         "python": 3,
         "ruby": 0,
         "rust": 0,
-        "total": 292
+        "total": 293
       }
     },
     "pkg": {
       "app_version": "3.1.0.4875",
       "arch": "amd64",
-      "generated": "2026-06-21T12:20:12Z",
+      "generated": "2026-07-07T08:54:06Z",
       "packages": {
         "dotnet": [
           {
@@ -1286,6 +1290,10 @@
             "version": "8.0.6"
           },
           {
+            "name": "Lidarr.Api.V1",
+            "version": "1.0.0"
+          },
+          {
             "name": "Lidarr.Common",
             "version": "1.0.0"
           },
@@ -1294,11 +1302,7 @@
             "version": "1.0.0"
           },
           {
-            "name": "Lidarr.Host",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Lidarr.Mono",
+            "name": "Lidarr.SignalR",
             "version": "1.0.0"
           },
           {
@@ -1717,11 +1721,11 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-clibs-lib32",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -1813,11 +1817,11 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-runtime-lib32",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -1829,7 +1833,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -1837,7 +1841,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-zlib",
@@ -1857,7 +1861,7 @@
           },
           {
             "name": "aom",
-            "version": "3.13.3"
+            "version": "3.14.1"
           },
           {
             "name": "bash",
@@ -2209,7 +2213,7 @@
           },
           {
             "name": "openexr",
-            "version": "3.4.12"
+            "version": "3.4.13"
           },
           {
             "name": "openjph",
@@ -2261,7 +2265,7 @@
           },
           {
             "name": "python311",
-            "version": "3.11.15_3"
+            "version": "3.11.15_4"
           },
           {
             "name": "readline",
@@ -2403,7 +2407,7 @@
     "pkg-latest": {
       "app_version": "3.1.0.4875",
       "arch": "amd64",
-      "generated": "2026-06-21T12:20:17Z",
+      "generated": "2026-07-07T08:50:16Z",
       "packages": {
         "dotnet": [
           {
@@ -2483,15 +2487,19 @@
             "version": "8.0.6"
           },
           {
+            "name": "Lidarr.Api.V1",
+            "version": "1.0.0"
+          },
+          {
             "name": "Lidarr.Common",
             "version": "1.0.0"
           },
           {
-            "name": "Lidarr.Core",
+            "name": "Lidarr.Http",
             "version": "1.0.0"
           },
           {
-            "name": "Lidarr.Host",
+            "name": "Lidarr.Mono",
             "version": "1.0.0"
           },
           {
@@ -2914,11 +2922,11 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.0"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-clibs-lib32",
-            "version": "15.0"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -3006,11 +3014,11 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p10"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-runtime-lib32",
-            "version": "15.0p7"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -3022,7 +3030,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.0p10"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -3030,7 +3038,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.0p10"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-zlib",
@@ -3046,7 +3054,7 @@
           },
           {
             "name": "aom",
-            "version": "3.14.0"
+            "version": "3.14.1_1"
           },
           {
             "name": "bash",
@@ -3094,11 +3102,11 @@
           },
           {
             "name": "expat",
-            "version": "2.8.1"
+            "version": "2.8.2"
           },
           {
             "name": "ffmpeg",
-            "version": "8.1.1,1"
+            "version": "8.1.2_1,1"
           },
           {
             "name": "fontconfig",
@@ -3114,7 +3122,7 @@
           },
           {
             "name": "gcc14",
-            "version": "14.2.0_4"
+            "version": "14.2.0_6"
           },
           {
             "name": "gdk-pixbuf2",
@@ -3146,7 +3154,7 @@
           },
           {
             "name": "harfbuzz",
-            "version": "13.2.1"
+            "version": "14.2.1"
           },
           {
             "name": "highway",
@@ -3174,7 +3182,7 @@
           },
           {
             "name": "jq",
-            "version": "1.8.1"
+            "version": "1.8.2"
           },
           {
             "name": "krb5",
@@ -3218,7 +3226,7 @@
           },
           {
             "name": "libXrandr",
-            "version": "1.5.4"
+            "version": "1.5.5"
           },
           {
             "name": "libXrender",
@@ -3230,7 +3238,7 @@
           },
           {
             "name": "libass",
-            "version": "0.17.4_1"
+            "version": "0.17.5"
           },
           {
             "name": "libbluray",
@@ -3266,7 +3274,7 @@
           },
           {
             "name": "libffi",
-            "version": "3.5.2"
+            "version": "3.6.0"
           },
           {
             "name": "libglvnd",
@@ -3286,7 +3294,7 @@
           },
           {
             "name": "libjxl",
-            "version": "0.11.2"
+            "version": "0.12.0"
           },
           {
             "name": "liblz4",
@@ -3306,7 +3314,7 @@
           },
           {
             "name": "librsvg2-rust",
-            "version": "2.62.2_1"
+            "version": "2.62.3"
           },
           {
             "name": "libtasn1",
@@ -3342,7 +3350,7 @@
           },
           {
             "name": "libva",
-            "version": "2.23.0"
+            "version": "2.24.0"
           },
           {
             "name": "libvdpau",
@@ -3402,7 +3410,7 @@
           },
           {
             "name": "openexr",
-            "version": "3.4.12"
+            "version": "3.4.13"
           },
           {
             "name": "openjph",
@@ -3441,20 +3449,20 @@
             "version": "1.6.58"
           },
           {
-            "name": "py311-boost-libs",
+            "name": "py312-boost-libs",
             "version": "1.89.0"
           },
           {
-            "name": "py311-numpy",
+            "name": "py312-numpy",
             "version": "2.4.6_1,1"
           },
           {
-            "name": "py311-packaging",
+            "name": "py312-packaging",
             "version": "26.2"
           },
           {
-            "name": "python311",
-            "version": "3.11.15_3"
+            "name": "python312",
+            "version": "3.12.13_3"
           },
           {
             "name": "readline",
@@ -3494,7 +3502,7 @@
           },
           {
             "name": "vmaf",
-            "version": "3.1.0"
+            "version": "3.2.0"
           },
           {
             "name": "vulkan-loader",
@@ -3593,7 +3601,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 122,
+        "dotnet": 123,
         "freebsd": 157,
         "go": 0,
         "java": 0,
@@ -3602,7 +3610,7 @@
         "python": 3,
         "ruby": 0,
         "rust": 0,
-        "total": 293
+        "total": 294
       }
     }
   }
