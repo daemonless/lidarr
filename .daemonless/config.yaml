@@ -10,11 +10,16 @@ build:
     - tag: latest
       containerfile: Containerfile
       default: true
+    - tag: develop
+      containerfile: Containerfile
+      args:
+        LIDARR_BRANCH: develop
+      tag_desc: "**Develop branch** — Servarr's recommended pre-release channel; includes plugin support (`/system/plugins`) and is more tested than nightly. One-way DB migrations; back up /config before switching back to release."
     - tag: nightly
       containerfile: Containerfile
       args:
         LIDARR_BRANCH: nightly
-      tag_desc: "**Nightly branch** — required for plugin support (adds the `/system/plugins` menu). One-way DB migrations; back up /config before switching back to release."
+      tag_desc: "**Nightly branch** — bleeding-edge; also has plugin support (`/system/plugins`). One-way DB migrations; back up /config before switching back to release."
     - tag: pkg
       containerfile: Containerfile.pkg
     - tag: pkg-latest

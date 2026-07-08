@@ -11,6 +11,9 @@ Source: dbuild templates
 
 Music collection manager for Usenet and BitTorrent users — monitors RSS feeds, grabs, sorts, and renames tracks from your favorite artists.
 
+> [!WARNING]
+> **Requires ocijail ≥ 0.6.0 (annotation support).** This image needs the jail permission **allow.mlock**, applied via OCI annotations. FreeBSD **quarterly ships ocijail 0.4.0, which has no annotation support** — the container starts but the permission is silently dropped, so the app can crash or misbehave at runtime. Point your pkg repos at the `latest` branch (ocijail ≥ 0.6.0), then run with the annotation flag below. See the [ocijail guide](https://daemonless.io/guides/ocijail-patch/).
+
 | | |
 |---|---|
 | **Port** | 8686 |
@@ -22,7 +25,8 @@ Music collection manager for Usenet and BitTorrent users — monitors RSS feeds,
 | Tag | Description | Best For |
 | :--- | :--- | :--- |
 | `latest` | **Upstream Binary**. Built from official release. | Most users. Matches Linux Docker behavior. |
-| `nightly` | **Nightly branch** — required for plugin support (adds the `/system/plugins` menu). One-way DB migrations; back up /config before switching back to release. | Alternative build. |
+| `develop` | **Develop branch** — Servarr's recommended pre-release channel; includes plugin support (`/system/plugins`) and is more tested than nightly. One-way DB migrations; back up /config before switching back to release. | Alternative build. |
+| `nightly` | **Nightly branch** — bleeding-edge; also has plugin support (`/system/plugins`). One-way DB migrations; back up /config before switching back to release. | Alternative build. |
 | `pkg` | **FreeBSD Quarterly**. Uses stable, tested packages. | Production stability. |
 | `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
 
