@@ -82,7 +82,7 @@ services:
     name: lidarr
     options:
       - container: 'boot args:--pull'
-      - expose: '8686:8686 proto:tcp' \
+      - expose: '8686:8686 proto:tcp'
     oci:
       user: root
       environment:
