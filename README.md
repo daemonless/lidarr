@@ -11,9 +11,6 @@ Source: dbuild templates
 
 Music collection manager for Usenet and BitTorrent users — monitors RSS feeds, grabs, sorts, and renames tracks from your favorite artists.
 
-> [!WARNING]
-> **Requires ocijail ≥ 0.6.0 (annotation support).** This image needs the jail permission **allow.mlock**, applied via OCI annotations. FreeBSD **quarterly ships ocijail 0.4.0, which has no annotation support** — the container starts but the permission is silently dropped, so the app can crash or misbehave at runtime. Point your pkg repos at the `latest` branch (ocijail ≥ 0.6.0), then run with the annotation flag below. See the [ocijail guide](https://daemonless.io/guides/ocijail-patch/).
-
 | | |
 |---|---|
 | **Port** | 8686 |
@@ -54,8 +51,11 @@ services:
       - "8686:8686"
     annotations:
       org.freebsd.jail.allow.mlock: "true"
-    restart: unless-stopped
+    # always (not unless-stopped) so FreeBSD's podman rc.d auto-starts it at boot
+    restart: always
 ```
+
+Save as `compose.yaml`, then run `podman-compose up -d`.
 
 ### AppJail Director
 **.env**:
@@ -113,6 +113,9 @@ OPTION overwrite=force
 OPTION from=ghcr.io/daemonless/lidarr:${tag}
 SET allow.mlock=1
 ```
+
+Save the files above, then run `appjail-director up`.
+
 **Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
 
 ### Podman CLI
@@ -129,6 +132,8 @@ podman run -d --name lidarr \
   -v /path/to/downloads:/downloads # optional \
   ghcr.io/daemonless/lidarr:latest
 ```
+
+Save as `run.sh`, then run `sh run.sh`.
 
 ### AppJail
 
@@ -147,7 +152,38 @@ appjail oci run -Pd \
   -o fstab="/path/to/downloads /downloads <pseudofs>" \ # optional
   ghcr.io/daemonless/lidarr:latest lidarr
 ```
+
+Save as `run.sh`, then run `sh run.sh`.
+
 **Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
+
+### Bastille
+
+> [!WARNING]
+> Bastille's OCI support is **experimental**. It requires `buildah`, shares the host network stack (`inherit`), and persists image-declared volumes under `--data-path`.
+
+```yaml
+services:
+  lidarr:
+    image: "ghcr.io/daemonless/lidarr:latest"
+    container_name: lidarr
+    network_mode: host  # jail shares host networking
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+```
+
+Save as `podman-compose.yml`, then run `bastille up`. Or via CLI:
+
+```bash
+bastille create -O \
+  --env PUID=1000 \
+  --env PGID=1000 \
+  --env TZ=UTC \
+  --data-path /path/to/containers/lidarr \
+  lidarr ghcr.io/daemonless/lidarr:latest inherit
+```
 
 ### Ansible
 
@@ -171,6 +207,8 @@ appjail oci run -Pd \
     annotation:
       org.freebsd.jail.allow.mlock: "true"
 ```
+
+Save as `lidarr-deploy.yaml`, then run `ansible-playbook lidarr-deploy.yaml`.
 
 Access at: `http://localhost:8686`
 
