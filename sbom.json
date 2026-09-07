@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-30T18:54:27Z",
+  "generated": "2026-09-07T08:25:35Z",
   "image": "lidarr",
   "tags": {
     "develop": {
-      "app_version": "3.1.4.5029",
+      "app_version": "3.1.5.5066",
       "arch": "amd64",
-      "generated": "2026-08-30T18:52:43Z",
+      "generated": "2026-09-07T08:23:16Z",
       "packages": {
         "dotnet": [
           {
@@ -104,6 +104,11 @@
             "version": "8.0.6"
           },
           {
+            "name": "Lidarr",
+            "purl": "",
+            "version": "1.0.0"
+          },
+          {
             "name": "Lidarr.Api.V1",
             "purl": "",
             "version": "1.0.0"
@@ -120,6 +125,11 @@
           },
           {
             "name": "Lidarr.Host",
+            "purl": "",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Lidarr.Http",
             "purl": "",
             "version": "1.0.0"
           },
@@ -461,7 +471,7 @@
           {
             "name": "Sentry",
             "purl": "",
-            "version": "4.0.2"
+            "version": "5.16.3"
           },
           {
             "name": "SharpZipLib",
@@ -998,7 +1008,7 @@
               "BSD2CLAUSE"
             ],
             "name": "dav1d",
-            "version": "1.5.3_1"
+            "version": "1.5.4"
           },
           {
             "licenses": [
@@ -1867,7 +1877,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 126,
+        "dotnet": 128,
         "freebsd": 160,
         "go": 0,
         "java": 0,
@@ -1876,13 +1886,13 @@
         "python": 3,
         "ruby": 0,
         "rust": 0,
-        "total": 300
+        "total": 302
       }
     },
     "latest": {
       "app_version": "3.1.0.4875",
       "arch": "amd64",
-      "generated": "2026-08-30T18:52:27Z",
+      "generated": "2026-09-07T08:23:39Z",
       "packages": {
         "dotnet": [
           {
@@ -1979,6 +1989,16 @@
             "name": "ImpromptuInterface",
             "purl": "",
             "version": "8.0.6"
+          },
+          {
+            "name": "Lidarr",
+            "purl": "",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Lidarr.Api.V1",
+            "purl": "",
+            "version": "1.0.0"
           },
           {
             "name": "Lidarr.Common",
@@ -2875,7 +2895,7 @@
               "BSD2CLAUSE"
             ],
             "name": "dav1d",
-            "version": "1.5.3_1"
+            "version": "1.5.4"
           },
           {
             "licenses": [
@@ -3744,7 +3764,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 126,
+        "dotnet": 128,
         "freebsd": 160,
         "go": 0,
         "java": 0,
@@ -3753,13 +3773,13 @@
         "python": 3,
         "ruby": 0,
         "rust": 0,
-        "total": 300
+        "total": 302
       }
     },
     "nightly": {
-      "app_version": "3.1.5.5041",
+      "app_version": "3.1.5.5066",
       "arch": "amd64",
-      "generated": "2026-08-30T18:51:44Z",
+      "generated": "2026-09-07T08:23:29Z",
       "packages": {
         "dotnet": [
           {
@@ -3858,6 +3878,11 @@
             "version": "8.0.6"
           },
           {
+            "name": "Lidarr",
+            "purl": "",
+            "version": "1.0.0"
+          },
+          {
             "name": "Lidarr.Api.V1",
             "purl": "",
             "version": "1.0.0"
@@ -3873,12 +3898,22 @@
             "version": "1.0.0"
           },
           {
+            "name": "Lidarr.Host",
+            "purl": "",
+            "version": "1.0.0"
+          },
+          {
             "name": "Lidarr.Http",
             "purl": "",
             "version": "1.0.0"
           },
           {
             "name": "Lidarr.Mono",
+            "purl": "",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Lidarr.SignalR",
             "purl": "",
             "version": "1.0.0"
           },
@@ -4210,7 +4245,7 @@
           {
             "name": "Sentry",
             "purl": "",
-            "version": "4.0.2"
+            "version": "5.16.3"
           },
           {
             "name": "SharpZipLib",
@@ -4747,7 +4782,7 @@
               "BSD2CLAUSE"
             ],
             "name": "dav1d",
-            "version": "1.5.3_1"
+            "version": "1.5.4"
           },
           {
             "licenses": [
@@ -5616,7 +5651,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 125,
+        "dotnet": 128,
         "freebsd": 160,
         "go": 0,
         "java": 0,
@@ -5625,13 +5660,13 @@
         "python": 3,
         "ruby": 0,
         "rust": 0,
-        "total": 299
+        "total": 302
       }
     },
     "pkg": {
       "app_version": "3.1.0.4875",
       "arch": "amd64",
-      "generated": "2026-08-30T18:52:24Z",
+      "generated": "2026-09-07T08:23:05Z",
       "packages": {
         "dotnet": [
           {
@@ -5730,6 +5765,11 @@
             "version": "8.0.6"
           },
           {
+            "name": "Lidarr",
+            "purl": "",
+            "version": "1.0.0"
+          },
+          {
             "name": "Lidarr.Api.V1",
             "purl": "",
             "version": "1.0.0"
@@ -5741,6 +5781,21 @@
           },
           {
             "name": "Lidarr.Core",
+            "purl": "",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Lidarr.Host",
+            "purl": "",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Lidarr.Http",
+            "purl": "",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Lidarr.Mono",
             "purl": "",
             "version": "1.0.0"
           },
@@ -6614,7 +6669,7 @@
               "BSD2CLAUSE"
             ],
             "name": "dav1d",
-            "version": "1.5.3_1"
+            "version": "1.5.4"
           },
           {
             "licenses": [
@@ -7483,7 +7538,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 124,
+        "dotnet": 128,
         "freebsd": 160,
         "go": 0,
         "java": 0,
@@ -7492,13 +7547,13 @@
         "python": 3,
         "ruby": 0,
         "rust": 0,
-        "total": 298
+        "total": 302
       }
     },
     "pkg-latest": {
       "app_version": "3.1.0.4875",
       "arch": "amd64",
-      "generated": "2026-08-30T18:52:36Z",
+      "generated": "2026-09-07T08:23:41Z",
       "packages": {
         "dotnet": [
           {
@@ -7597,6 +7652,11 @@
             "version": "8.0.6"
           },
           {
+            "name": "Lidarr",
+            "purl": "",
+            "version": "1.0.0"
+          },
+          {
             "name": "Lidarr.Api.V1",
             "purl": "",
             "version": "1.0.0"
@@ -7617,7 +7677,17 @@
             "version": "1.0.0"
           },
           {
+            "name": "Lidarr.Http",
+            "purl": "",
+            "version": "1.0.0"
+          },
+          {
             "name": "Lidarr.Mono",
+            "purl": "",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Lidarr.SignalR",
             "purl": "",
             "version": "1.0.0"
           },
@@ -8486,7 +8556,7 @@
               "BSD2CLAUSE"
             ],
             "name": "dav1d",
-            "version": "1.5.3_1"
+            "version": "1.5.4"
           },
           {
             "licenses": [
@@ -8678,7 +8748,7 @@
               "APACHE20"
             ],
             "name": "lerc",
-            "version": "4.1.1"
+            "version": "4.2.0"
           },
           {
             "licenses": [
@@ -8769,7 +8839,7 @@
               "MIT"
             ],
             "name": "libdeflate",
-            "version": "1.25"
+            "version": "1.26"
           },
           {
             "licenses": [
@@ -9063,14 +9133,14 @@
               "BSD3CLAUSE"
             ],
             "name": "openexr",
-            "version": "3.4.15"
+            "version": "3.4.15_1"
           },
           {
             "licenses": [
               "BSD2CLAUSE"
             ],
             "name": "openjph",
-            "version": "0.30.1"
+            "version": "0.31.0"
           },
           {
             "licenses": [
@@ -9105,7 +9175,7 @@
               "BSD3CLAUSE"
             ],
             "name": "pcre2",
-            "version": "10.47_1"
+            "version": "10.48"
           },
           {
             "licenses": [
@@ -9148,7 +9218,7 @@
               "APACHE20"
             ],
             "name": "py312-packaging",
-            "version": "26.2"
+            "version": "26.3"
           },
           {
             "licenses": [
@@ -9354,7 +9424,7 @@
           {
             "name": "packaging",
             "purl": "",
-            "version": "26.2"
+            "version": "26.3"
           }
         ],
         "ruby": [],
@@ -9362,7 +9432,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 125,
+        "dotnet": 128,
         "freebsd": 161,
         "go": 0,
         "java": 0,
@@ -9371,7 +9441,7 @@
         "python": 3,
         "ruby": 0,
         "rust": 0,
-        "total": 300
+        "total": 303
       }
     }
   }
