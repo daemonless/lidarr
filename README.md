@@ -7,6 +7,7 @@ Source: dbuild templates
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/daemonless/lidarr/build.yaml?style=flat-square&label=Build&color=green)](https://github.com/daemonless/lidarr/actions)
 [![Last Commit](https://img.shields.io/github/last-commit/daemonless/lidarr?style=flat-square&label=Last+Commit&color=blue)](https://github.com/daemonless/lidarr/commits)
+[![OCI Pulls](https://img.shields.io/docker/pulls/daemonless/lidarr?style=flat-square&label=OCI+Pulls&color=blue)](https://hub.docker.com/r/daemonless/lidarr)
 [![mlock Required](https://img.shields.io/badge/mlock-required-orange?style=flat-square&logo=freebsd&logoColor=white)](https://daemonless.io/guides/ocijail-patch/)
 
 Music collection manager for Usenet and BitTorrent users — monitors RSS feeds, grabs, sorts, and renames tracks from your favorite artists.
@@ -81,8 +82,9 @@ services:
   lidarr:
     name: lidarr
     options:
-      - container: 'boot args:--pull'
+      - container: 'args:--pull'
       - expose: '8686:8686 proto:tcp'
+      - template: !ENV '${PWD}/template.conf'
     oci:
       user: root
       environment:
@@ -109,14 +111,30 @@ volumes:
 
 ARG tag=latest
 
+OPTION container=boot
 OPTION overwrite=force
 OPTION from=ghcr.io/daemonless/lidarr:${tag}
-SET allow.mlock=1
+```
+
+**template.conf**:
+
+```
+# template.conf
+
+exec.start: "/bin/sh /etc/rc"
+exec.stop: "/bin/sh /etc/rc.shutdown jail"
+mount.devfs
+persist
+allow.mlock
 ```
 
 Save the files above, then run `appjail-director up`.
 
-**Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
+
+> [!WARNING]
+> Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the jail's IPv4 address or hostname assigned by the virtual network.
+>
+> To avoid exposing ports, just remove the `expose` option in your `appjail-director.yml` or from your command-line arguments.
 
 ### Podman CLI
 
@@ -137,12 +155,14 @@ Save as `run.sh`, then run `sh run.sh`.
 
 ### AppJail
 
+
 ```bash
 appjail oci run -Pd \
   -o overwrite=force \
   -o container="args:--pull" \
   -o virtualnet=":<random> default" \
   -o nat \
+  -o template=template.conf \
   -o expose="8686:8686 proto:tcp" \
   -e PUID=1000 \
   -e PGID=1000 \
@@ -153,35 +173,57 @@ appjail oci run -Pd \
   ghcr.io/daemonless/lidarr:latest lidarr
 ```
 
-Save as `run.sh`, then run `sh run.sh`.
+**template.conf**:
+```
+# template.conf
 
-**Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
+exec.start: "/bin/sh /etc/rc"
+exec.stop: "/bin/sh /etc/rc.shutdown jail"
+mount.devfs
+persist
+allow.mlock
+```
+
+Save the files above, then run `sh run.sh`.
+
+
+> [!WARNING]
+> Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the jail's IPv4 address or hostname assigned by the virtual network.
+>
+> To avoid exposing ports, just remove the `expose` option in your `appjail-director.yml` or from your command-line arguments.
 
 ### Bastille
 
 > [!WARNING]
-> Bastille's OCI support is **experimental**. It requires `buildah`, shares the host network stack (`inherit`), and persists image-declared volumes under `--data-path`.
+> Bastille's OCI support is **experimental**. It requires `buildah` and shares the host network stack (`inherit`). Mount volumes with `--volume HOST JAIL`; without it, image-declared volumes are stored under `${bastille_volumesdir}/${jail}`.
 
 ```yaml
 services:
   lidarr:
+    name: lidarr
     image: "ghcr.io/daemonless/lidarr:latest"
-    container_name: lidarr
-    network_mode: host  # jail shares host networking
+    network:
+      - mode: host
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=UTC
+    volumes:
+      - "/path/to/containers/lidarr:/config"
+      - "/path/to/music:/music"
+      - "/path/to/downloads:/downloads"
 ```
 
-Save as `podman-compose.yml`, then run `bastille up`. Or via CLI:
+Save as `bastille-compose.yml`, then run `bastille up`. Or via CLI:
 
 ```bash
 bastille create -O \
   --env PUID=1000 \
   --env PGID=1000 \
   --env TZ=UTC \
-  --data-path /path/to/containers/lidarr \
+  --volume /path/to/containers/lidarr /config \
+  --volume /path/to/music /music \
+  --volume /path/to/downloads /downloads \
   lidarr ghcr.io/daemonless/lidarr:latest inherit
 ```
 
