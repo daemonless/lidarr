@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-21T22:33:54Z",
+  "generated": "2026-10-04T19:30:22Z",
   "image": "lidarr",
   "tags": {
     "develop": {
       "app_version": "3.1.6.5078",
       "arch": "amd64",
-      "generated": "2026-09-21T22:08:41Z",
+      "generated": "2026-10-04T19:28:43Z",
       "packages": {
         "dotnet": [
           {
@@ -1906,7 +1906,7 @@
     "latest": {
       "app_version": "3.1.0.4875",
       "arch": "amd64",
-      "generated": "2026-09-21T22:07:14Z",
+      "generated": "2026-10-04T19:28:30Z",
       "packages": {
         "dotnet": [
           {
@@ -3807,7 +3807,7 @@
     "nightly": {
       "app_version": "3.1.6.5078",
       "arch": "amd64",
-      "generated": "2026-09-21T22:07:23Z",
+      "generated": "2026-10-04T19:28:36Z",
       "packages": {
         "dotnet": [
           {
@@ -5708,7 +5708,7 @@
     "pkg": {
       "app_version": "3.1.0.4875",
       "arch": "amd64",
-      "generated": "2026-09-21T22:11:14Z",
+      "generated": "2026-10-04T19:28:32Z",
       "packages": {
         "dotnet": [
           {
@@ -7609,7 +7609,7 @@
     "pkg-latest": {
       "app_version": "3.1.0.4875",
       "arch": "amd64",
-      "generated": "2026-09-21T22:07:43Z",
+      "generated": "2026-10-04T19:27:17Z",
       "packages": {
         "dotnet": [
           {
@@ -8546,14 +8546,14 @@
               "BSD3CLAUSE"
             ],
             "name": "Imath",
-            "version": "3.2.3"
+            "version": "3.2.3_1"
           },
           {
             "licenses": [
               "BSD2CLAUSE"
             ],
             "name": "aom",
-            "version": "3.15.0"
+            "version": "3.15.1"
           },
           {
             "licenses": [
@@ -8575,7 +8575,7 @@
               "BSL"
             ],
             "name": "boost-libs",
-            "version": "1.91.0"
+            "version": "1.92.0"
           },
           {
             "licenses": [
@@ -8648,7 +8648,7 @@
               "LGPL3+"
             ],
             "name": "ffmpeg",
-            "version": "9.0.1,1"
+            "version": "9.0.2,1"
           },
           {
             "licenses": [
@@ -8670,7 +8670,7 @@
               "LGPL21"
             ],
             "name": "fribidi",
-            "version": "1.0.16"
+            "version": "1.0.17"
           },
           {
             "licenses": [
@@ -9231,7 +9231,7 @@
               "BSD3CLAUSE"
             ],
             "name": "p11-kit",
-            "version": "0.26.5"
+            "version": "0.26.5_1"
           },
           {
             "licenses": [
@@ -9245,7 +9245,7 @@
               "BSD3CLAUSE"
             ],
             "name": "pcre2",
-            "version": "10.48"
+            "version": "10.49"
           },
           {
             "licenses": [
@@ -9273,7 +9273,7 @@
               "BSL"
             ],
             "name": "py312-boost-libs",
-            "version": "1.91.0"
+            "version": "1.92.0"
           },
           {
             "licenses": [
@@ -9295,14 +9295,14 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.14"
+            "version": "3.12.14_1"
           },
           {
             "licenses": [
               "GPLv3"
             ],
             "name": "readline",
-            "version": "8.3.3"
+            "version": "8.3.6"
           },
           {
             "licenses": [
