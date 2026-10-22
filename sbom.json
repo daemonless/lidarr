@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-20T22:25:45Z",
+  "generated": "2026-10-22T23:06:49Z",
   "image": "lidarr",
   "tags": {
     "develop": {
       "app_version": "3.1.6.5078",
       "arch": "amd64",
-      "generated": "2026-10-20T22:23:35Z",
+      "generated": "2026-10-22T23:01:24Z",
       "packages": {
         "dotnet": [
           {
@@ -1026,13 +1026,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
-          },
-          {
-            "licenses": [
               "MIT"
             ],
             "name": "expat",
@@ -1702,13 +1695,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "licenses": [
               "APACHE20"
             ],
             "name": "shaderc",
@@ -1720,13 +1706,6 @@
             ],
             "name": "shared-mime-info",
             "version": "2.4_2"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
           },
           {
             "licenses": [
@@ -1899,7 +1878,7 @@
       "source": "upstream",
       "summary": {
         "dotnet": 128,
-        "freebsd": 163,
+        "freebsd": 160,
         "go": 0,
         "java": 0,
         "node": 11,
@@ -1907,13 +1886,13 @@
         "python": 3,
         "ruby": 0,
         "rust": 0,
-        "total": 305
+        "total": 302
       }
     },
     "latest": {
       "app_version": "3.1.0.4875",
       "arch": "amd64",
-      "generated": "2026-10-20T22:18:07Z",
+      "generated": "2026-10-22T23:01:44Z",
       "packages": {
         "dotnet": [
           {
@@ -2934,13 +2913,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
-          },
-          {
-            "licenses": [
               "MIT"
             ],
             "name": "expat",
@@ -3610,13 +3582,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "licenses": [
               "APACHE20"
             ],
             "name": "shaderc",
@@ -3628,13 +3593,6 @@
             ],
             "name": "shared-mime-info",
             "version": "2.4_2"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
           },
           {
             "licenses": [
@@ -3807,7 +3765,7 @@
       "source": "upstream",
       "summary": {
         "dotnet": 128,
-        "freebsd": 163,
+        "freebsd": 160,
         "go": 0,
         "java": 0,
         "node": 11,
@@ -3815,13 +3773,13 @@
         "python": 3,
         "ruby": 0,
         "rust": 0,
-        "total": 305
+        "total": 302
       }
     },
     "nightly": {
       "app_version": "3.1.6.5102",
       "arch": "amd64",
-      "generated": "2026-10-20T22:19:12Z",
+      "generated": "2026-10-22T23:05:18Z",
       "packages": {
         "dotnet": [
           {
@@ -4842,13 +4800,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
-          },
-          {
-            "licenses": [
               "MIT"
             ],
             "name": "expat",
@@ -5518,13 +5469,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "licenses": [
               "APACHE20"
             ],
             "name": "shaderc",
@@ -5536,13 +5480,6 @@
             ],
             "name": "shared-mime-info",
             "version": "2.4_2"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
           },
           {
             "licenses": [
@@ -5715,7 +5652,7 @@
       "source": "upstream",
       "summary": {
         "dotnet": 128,
-        "freebsd": 163,
+        "freebsd": 160,
         "go": 0,
         "java": 0,
         "node": 11,
@@ -5723,13 +5660,13 @@
         "python": 3,
         "ruby": 0,
         "rust": 0,
-        "total": 305
+        "total": 302
       }
     },
     "pkg": {
       "app_version": "3.1.0.4875",
       "arch": "amd64",
-      "generated": "2026-10-20T22:18:10Z",
+      "generated": "2026-10-22T23:01:03Z",
       "packages": {
         "dotnet": [
           {
@@ -6750,13 +6687,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
-          },
-          {
-            "licenses": [
               "MIT"
             ],
             "name": "expat",
@@ -7426,13 +7356,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "licenses": [
               "APACHE20"
             ],
             "name": "shaderc",
@@ -7444,13 +7367,6 @@
             ],
             "name": "shared-mime-info",
             "version": "2.4_2"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
           },
           {
             "licenses": [
@@ -7623,7 +7539,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 128,
-        "freebsd": 163,
+        "freebsd": 160,
         "go": 0,
         "java": 0,
         "node": 11,
@@ -7631,13 +7547,13 @@
         "python": 3,
         "ruby": 0,
         "rust": 0,
-        "total": 305
+        "total": 302
       }
     },
     "pkg-latest": {
       "app_version": "3.1.0.4875",
       "arch": "amd64",
-      "generated": "2026-10-20T22:24:13Z",
+      "generated": "2026-10-22T23:01:18Z",
       "packages": {
         "dotnet": [
           {
@@ -8658,13 +8574,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
-          },
-          {
-            "licenses": [
               "MIT"
             ],
             "name": "expat",
@@ -8766,7 +8675,7 @@
               "MIT"
             ],
             "name": "harfbuzz",
-            "version": "14.5.1"
+            "version": "14.6.0"
           },
           {
             "licenses": [
@@ -8853,7 +8762,7 @@
               "MIT"
             ],
             "name": "libX11",
-            "version": "1.8.13_1,1"
+            "version": "1.8.14,1"
           },
           {
             "licenses": [
@@ -8902,7 +8811,7 @@
               "MIT"
             ],
             "name": "libXrender",
-            "version": "0.9.12"
+            "version": "0.9.13"
           },
           {
             "licenses": [
@@ -9334,13 +9243,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "licenses": [
               "APACHE20"
             ],
             "name": "shaderc",
@@ -9352,13 +9254,6 @@
             ],
             "name": "shared-mime-info",
             "version": "2.4_2"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
           },
           {
             "licenses": [
@@ -9531,7 +9426,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 128,
-        "freebsd": 163,
+        "freebsd": 160,
         "go": 0,
         "java": 0,
         "node": 11,
@@ -9539,7 +9434,7 @@
         "python": 3,
         "ruby": 0,
         "rust": 0,
-        "total": 305
+        "total": 302
       }
     }
   }
