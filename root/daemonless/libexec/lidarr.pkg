@@ -1,5 +1,5 @@
 #!/bin/sh
-# Lidarr s6 service (pkg version)
+# Start Lidarr (pkg layout); /init has already dropped to bsd.
 
 # Required environment for .NET on FreeBSD
 export HOME=/config
@@ -11,4 +11,4 @@ export DOTNET_SYSTEM_NET_DISABLEIPV6=1
 export System_Globalization_Invariant=true
 
 cd /config
-exec /usr/local/bin/s6-setuidgid bsd /usr/local/share/lidarr/bin/Lidarr -nobrowser -data=/config
+exec /usr/local/share/lidarr/bin/Lidarr -nobrowser -data=/config "$@"

@@ -44,15 +44,11 @@ RUN mkdir -p /config && \
 # Copy service definition
 COPY root/ /
 
-# Use pkg-specific run script
-COPY root/etc/services.d/lidarr/run.pkg /etc/services.d/lidarr/run
+# The pkg layout's launcher
+RUN mv /daemonless/libexec/lidarr.pkg /daemonless/libexec/lidarr && \
+    chmod +x /daemonless/init.d/20-lidarr /daemonless/libexec/lidarr
 
-# Make scripts executable
-RUN chmod +x /etc/services.d/lidarr/run /etc/cont-init.d/* 2>/dev/null || true
-
-# Set up s6 service link
-RUN mkdir -p /run/s6/services/lidarr && \
-    ln -sf /etc/services.d/lidarr/run /run/s6/services/lidarr/run
+CMD ["/daemonless/libexec/lidarr"]
 
 # --- Expose (Injected by Generator) ---
 {%- if ports %}
