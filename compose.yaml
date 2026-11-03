@@ -33,7 +33,7 @@ services:
     image: ghcr.io/daemonless/lidarr:latest
     container_name: lidarr
     restart: unless-stopped
-    
+
     annotations:
       org.freebsd.jail.allow.mlock: "true"
 
