@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-03T22:27:05Z",
+  "generated": "2026-11-04T16:55:33Z",
   "image": "lidarr",
   "tags": {
     "develop": {
       "app_version": "3.2.0.5144",
       "arch": "amd64",
-      "generated": "2026-11-03T22:24:50Z",
+      "generated": "2026-11-04T16:51:42Z",
       "packages": {
         "dotnet": [
           {
@@ -1597,7 +1597,7 @@
               "PD"
             ],
             "name": "sqlite3",
-            "version": "3.53.4,1"
+            "version": "3.54.1,1"
           },
           {
             "licenses": [
@@ -1777,7 +1777,7 @@
     "latest": {
       "app_version": "3.1.6.5079",
       "arch": "amd64",
-      "generated": "2026-11-03T22:24:57Z",
+      "generated": "2026-11-04T16:51:49Z",
       "packages": {
         "dotnet": [
           {
@@ -3369,7 +3369,7 @@
               "PD"
             ],
             "name": "sqlite3",
-            "version": "3.53.4,1"
+            "version": "3.54.1,1"
           },
           {
             "licenses": [
@@ -3547,9 +3547,9 @@
       }
     },
     "nightly": {
-      "app_version": "3.2.0.5164",
+      "app_version": "3.2.0.5175",
       "arch": "amd64",
-      "generated": "2026-11-03T22:25:00Z",
+      "generated": "2026-11-04T16:51:38Z",
       "packages": {
         "dotnet": [
           {
@@ -5141,7 +5141,7 @@
               "PD"
             ],
             "name": "sqlite3",
-            "version": "3.53.4,1"
+            "version": "3.54.1,1"
           },
           {
             "licenses": [
@@ -5321,7 +5321,7 @@
     "pkg": {
       "app_version": "3.1.6.5079",
       "arch": "amd64",
-      "generated": "2026-11-03T22:25:24Z",
+      "generated": "2026-11-04T16:50:31Z",
       "packages": {
         "dotnet": [
           {
@@ -6913,7 +6913,7 @@
               "PD"
             ],
             "name": "sqlite3",
-            "version": "3.53.4,1"
+            "version": "3.54.1,1"
           },
           {
             "licenses": [
@@ -7093,7 +7093,7 @@
     "pkg-latest": {
       "app_version": "3.1.6.5079",
       "arch": "amd64",
-      "generated": "2026-11-03T22:25:21Z",
+      "generated": "2026-11-04T16:53:33Z",
       "packages": {
         "dotnet": [
           {
@@ -8685,7 +8685,7 @@
               "PD"
             ],
             "name": "sqlite3",
-            "version": "3.53.4,1"
+            "version": "3.54.1,1"
           },
           {
             "licenses": [
