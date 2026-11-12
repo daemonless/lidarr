@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-04T16:55:33Z",
+  "generated": "2026-11-12T00:49:34Z",
   "image": "lidarr",
   "tags": {
     "develop": {
-      "app_version": "3.2.0.5144",
+      "app_version": "3.2.1.5196",
       "arch": "amd64",
-      "generated": "2026-11-04T16:51:42Z",
+      "generated": "2026-11-12T00:48:05Z",
       "packages": {
         "dotnet": [
           {
@@ -834,7 +834,7 @@
               "BSD2CLAUSE"
             ],
             "name": "aom",
-            "version": "3.15.2"
+            "version": "3.15.3"
           },
           {
             "licenses": [
@@ -1477,7 +1477,7 @@
               "BSD3CLAUSE"
             ],
             "name": "openexr",
-            "version": "3.4.16"
+            "version": "3.4.17"
           },
           {
             "licenses": [
@@ -1777,7 +1777,7 @@
     "latest": {
       "app_version": "3.1.6.5079",
       "arch": "amd64",
-      "generated": "2026-11-04T16:51:49Z",
+      "generated": "2026-11-12T00:46:03Z",
       "packages": {
         "dotnet": [
           {
@@ -2606,7 +2606,7 @@
               "BSD2CLAUSE"
             ],
             "name": "aom",
-            "version": "3.15.2"
+            "version": "3.15.3"
           },
           {
             "licenses": [
@@ -3249,7 +3249,7 @@
               "BSD3CLAUSE"
             ],
             "name": "openexr",
-            "version": "3.4.16"
+            "version": "3.4.17"
           },
           {
             "licenses": [
@@ -3547,9 +3547,9 @@
       }
     },
     "nightly": {
-      "app_version": "3.2.0.5175",
+      "app_version": "3.2.1.5196",
       "arch": "amd64",
-      "generated": "2026-11-04T16:51:38Z",
+      "generated": "2026-11-12T00:46:45Z",
       "packages": {
         "dotnet": [
           {
@@ -4378,7 +4378,7 @@
               "BSD2CLAUSE"
             ],
             "name": "aom",
-            "version": "3.15.2"
+            "version": "3.15.3"
           },
           {
             "licenses": [
@@ -5021,7 +5021,7 @@
               "BSD3CLAUSE"
             ],
             "name": "openexr",
-            "version": "3.4.16"
+            "version": "3.4.17"
           },
           {
             "licenses": [
@@ -5321,7 +5321,7 @@
     "pkg": {
       "app_version": "3.1.6.5079",
       "arch": "amd64",
-      "generated": "2026-11-04T16:50:31Z",
+      "generated": "2026-11-12T00:46:57Z",
       "packages": {
         "dotnet": [
           {
@@ -6150,7 +6150,7 @@
               "BSD2CLAUSE"
             ],
             "name": "aom",
-            "version": "3.15.2"
+            "version": "3.15.3"
           },
           {
             "licenses": [
@@ -6793,7 +6793,7 @@
               "BSD3CLAUSE"
             ],
             "name": "openexr",
-            "version": "3.4.16"
+            "version": "3.4.17"
           },
           {
             "licenses": [
@@ -7093,7 +7093,7 @@
     "pkg-latest": {
       "app_version": "3.1.6.5079",
       "arch": "amd64",
-      "generated": "2026-11-04T16:53:33Z",
+      "generated": "2026-11-12T00:46:27Z",
       "packages": {
         "dotnet": [
           {
@@ -7922,7 +7922,7 @@
               "BSD2CLAUSE"
             ],
             "name": "aom",
-            "version": "3.15.2"
+            "version": "3.15.3"
           },
           {
             "licenses": [
@@ -7937,7 +7937,7 @@
               "LGPL3"
             ],
             "name": "binutils",
-            "version": "2.44,1"
+            "version": "2.44_1,1"
           },
           {
             "licenses": [
@@ -8002,7 +8002,7 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.9.0"
+            "version": "2.10.0"
           },
           {
             "licenses": [
@@ -8115,7 +8115,7 @@
               "GPLv2+"
             ],
             "name": "hwdata",
-            "version": "0.412,1"
+            "version": "0.413,1"
           },
           {
             "licenses": [
@@ -8540,8 +8540,8 @@
           },
           {
             "licenses": [
-              "LGPL3",
-              "GPLv2+"
+              "GPLv2+",
+              "LGPL3"
             ],
             "name": "nettle",
             "version": "3.10.2"
@@ -8565,7 +8565,7 @@
               "BSD3CLAUSE"
             ],
             "name": "openexr",
-            "version": "3.4.16"
+            "version": "3.4.17"
           },
           {
             "licenses": [
@@ -8621,7 +8621,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.8.4"
+            "version": "2.9.0"
           },
           {
             "licenses": [
@@ -8701,7 +8701,7 @@
               "BSD3CLAUSE"
             ],
             "name": "svt-av1",
-            "version": "4.2.0"
+            "version": "4.3.0"
           },
           {
             "licenses": [
@@ -8722,7 +8722,7 @@
               "APACHE20"
             ],
             "name": "vulkan-loader",
-            "version": "1.4.365"
+            "version": "1.4.368"
           },
           {
             "licenses": [
@@ -8761,8 +8761,8 @@
           },
           {
             "licenses": [
-              "GPLv2",
-              "BSD3CLAUSE"
+              "BSD3CLAUSE",
+              "GPLv2"
             ],
             "name": "zstd",
             "version": "1.5.7_2"
