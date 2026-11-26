@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-12T00:49:34Z",
+  "generated": "2026-11-26T09:23:42Z",
   "image": "lidarr",
   "tags": {
     "develop": {
       "app_version": "3.2.1.5196",
       "arch": "amd64",
-      "generated": "2026-11-12T00:48:05Z",
+      "generated": "2026-11-26T09:22:37Z",
       "packages": {
         "dotnet": [
           {
@@ -914,7 +914,7 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.9.0"
+            "version": "2.10.0"
           },
           {
             "licenses": [
@@ -1071,7 +1071,7 @@
               "MIT"
             ],
             "name": "krb5",
-            "version": "1.22.2_3"
+            "version": "1.22.3"
           },
           {
             "licenses": [
@@ -1261,7 +1261,7 @@
               "BSD3CLAUSE"
             ],
             "name": "libjxl",
-            "version": "0.12.0"
+            "version": "0.12.0_1"
           },
           {
             "licenses": [
@@ -1452,8 +1452,8 @@
           },
           {
             "licenses": [
-              "LGPL3",
-              "GPLv2+"
+              "GPLv2+",
+              "LGPL3"
             ],
             "name": "nettle",
             "version": "3.10.2"
@@ -1477,7 +1477,7 @@
               "BSD3CLAUSE"
             ],
             "name": "openexr",
-            "version": "3.4.17"
+            "version": "3.4.18"
           },
           {
             "licenses": [
@@ -1533,7 +1533,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.8.4"
+            "version": "2.9.2"
           },
           {
             "licenses": [
@@ -1569,7 +1569,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.15"
+            "version": "3.12.16"
           },
           {
             "licenses": [
@@ -1673,8 +1673,8 @@
           },
           {
             "licenses": [
-              "GPLv2",
-              "BSD3CLAUSE"
+              "BSD3CLAUSE",
+              "GPLv2"
             ],
             "name": "zstd",
             "version": "1.5.7_2"
@@ -1777,7 +1777,7 @@
     "latest": {
       "app_version": "3.1.6.5079",
       "arch": "amd64",
-      "generated": "2026-11-12T00:46:03Z",
+      "generated": "2026-11-26T09:21:19Z",
       "packages": {
         "dotnet": [
           {
@@ -2686,7 +2686,7 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.9.0"
+            "version": "2.10.0"
           },
           {
             "licenses": [
@@ -2843,7 +2843,7 @@
               "MIT"
             ],
             "name": "krb5",
-            "version": "1.22.2_3"
+            "version": "1.22.3"
           },
           {
             "licenses": [
@@ -3033,7 +3033,7 @@
               "BSD3CLAUSE"
             ],
             "name": "libjxl",
-            "version": "0.12.0"
+            "version": "0.12.0_1"
           },
           {
             "licenses": [
@@ -3224,8 +3224,8 @@
           },
           {
             "licenses": [
-              "LGPL3",
-              "GPLv2+"
+              "GPLv2+",
+              "LGPL3"
             ],
             "name": "nettle",
             "version": "3.10.2"
@@ -3249,7 +3249,7 @@
               "BSD3CLAUSE"
             ],
             "name": "openexr",
-            "version": "3.4.17"
+            "version": "3.4.18"
           },
           {
             "licenses": [
@@ -3305,7 +3305,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.8.4"
+            "version": "2.9.2"
           },
           {
             "licenses": [
@@ -3341,7 +3341,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.15"
+            "version": "3.12.16"
           },
           {
             "licenses": [
@@ -3445,8 +3445,8 @@
           },
           {
             "licenses": [
-              "GPLv2",
-              "BSD3CLAUSE"
+              "BSD3CLAUSE",
+              "GPLv2"
             ],
             "name": "zstd",
             "version": "1.5.7_2"
@@ -3547,25 +3547,25 @@
       }
     },
     "nightly": {
-      "app_version": "3.2.1.5196",
+      "app_version": "4.0.0.5236",
       "arch": "amd64",
-      "generated": "2026-11-12T00:46:45Z",
+      "generated": "2026-11-26T09:20:43Z",
       "packages": {
         "dotnet": [
           {
             "name": "BouncyCastle.Cryptography",
             "purl": "",
-            "version": "2.6.2"
+            "version": "2.7.0"
           },
           {
             "name": "Dapper",
             "purl": "",
-            "version": "2.1.79"
+            "version": "2.1.100"
           },
           {
             "name": "Diacritical.Net",
             "purl": "",
-            "version": "1.0.4"
+            "version": "1.0.5"
           },
           {
             "name": "DryIoc.Microsoft.DependencyInjection",
@@ -3590,32 +3590,32 @@
           {
             "name": "FluentMigrator",
             "purl": "",
-            "version": "6.2.0"
+            "version": "8.0.1"
           },
           {
             "name": "FluentMigrator.Abstractions",
             "purl": "",
-            "version": "6.2.0"
+            "version": "8.0.1"
           },
           {
             "name": "FluentMigrator.Extensions.Postgres",
             "purl": "",
-            "version": "6.2.0"
+            "version": "8.0.1"
           },
           {
             "name": "FluentMigrator.Runner.Core",
             "purl": "",
-            "version": "6.2.0"
+            "version": "8.0.1"
           },
           {
             "name": "FluentMigrator.Runner.Postgres",
             "purl": "",
-            "version": "6.2.0"
+            "version": "8.0.1"
           },
           {
             "name": "FluentMigrator.Runner.SQLite",
             "purl": "",
-            "version": "6.2.0"
+            "version": "8.0.1"
           },
           {
             "name": "FluentValidation",
@@ -3635,7 +3635,7 @@
           {
             "name": "ImpromptuInterface",
             "purl": "",
-            "version": "8.0.6"
+            "version": "8.1.0"
           },
           {
             "name": "Lidarr",
@@ -3680,172 +3680,172 @@
           {
             "name": "MailKit",
             "purl": "",
-            "version": "4.16.0"
+            "version": "4.18.2"
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.freebsd-x64",
             "purl": "",
-            "version": "8.0.27"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.AspNetCore.Cryptography.Internal",
             "purl": "",
-            "version": "8.0.27"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.AspNetCore.Cryptography.KeyDerivation",
             "purl": "",
-            "version": "8.0.27"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Configuration",
             "purl": "",
-            "version": "8.0.0"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Configuration.Abstractions",
             "purl": "",
-            "version": "8.0.0"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Configuration.Binder",
             "purl": "",
-            "version": "8.0.2"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Configuration.CommandLine",
             "purl": "",
-            "version": "8.0.0"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Configuration.EnvironmentVariables",
             "purl": "",
-            "version": "8.0.0"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Configuration.FileExtensions",
             "purl": "",
-            "version": "8.0.1"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Configuration.Json",
             "purl": "",
-            "version": "8.0.1"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Configuration.UserSecrets",
             "purl": "",
-            "version": "8.0.1"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.DependencyInjection",
             "purl": "",
-            "version": "8.0.1"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.DependencyInjection.Abstractions",
             "purl": "",
-            "version": "8.0.2"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Diagnostics",
             "purl": "",
-            "version": "8.0.1"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Diagnostics.Abstractions",
             "purl": "",
-            "version": "8.0.1"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.FileProviders.Abstractions",
             "purl": "",
-            "version": "8.0.0"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.FileProviders.Physical",
             "purl": "",
-            "version": "8.0.0"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.FileSystemGlobbing",
             "purl": "",
-            "version": "8.0.0"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Hosting",
             "purl": "",
-            "version": "8.0.1"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Hosting.Abstractions",
             "purl": "",
-            "version": "8.0.1"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Hosting.WindowsServices",
             "purl": "",
-            "version": "8.0.1"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Logging",
             "purl": "",
-            "version": "8.0.1"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Logging.Abstractions",
             "purl": "",
-            "version": "8.0.2"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Logging.Configuration",
             "purl": "",
-            "version": "8.0.1"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Logging.Console",
             "purl": "",
-            "version": "8.0.1"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Logging.Debug",
             "purl": "",
-            "version": "8.0.1"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Logging.EventLog",
             "purl": "",
-            "version": "8.0.1"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Logging.EventSource",
             "purl": "",
-            "version": "8.0.1"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Options",
             "purl": "",
-            "version": "8.0.2"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Options.ConfigurationExtensions",
             "purl": "",
-            "version": "8.0.0"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Primitives",
             "purl": "",
-            "version": "8.0.0"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.freebsd-x64",
             "purl": "",
-            "version": "8.0.27"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.OpenApi",
             "purl": "",
-            "version": "1.6.25"
+            "version": "2.7.5"
           },
           {
             "name": "Microsoft.Win32.Registry",
@@ -3860,7 +3860,7 @@
           {
             "name": "MimeKit",
             "purl": "",
-            "version": "4.16.0"
+            "version": "4.18.2"
           },
           {
             "name": "Mono.Nat",
@@ -3910,12 +3910,22 @@
           {
             "name": "Npgsql",
             "purl": "",
-            "version": "9.0.5"
+            "version": "10.0.4"
+          },
+          {
+            "name": "Openur.Mono.Unix",
+            "purl": "",
+            "version": "7.1.0.256"
+          },
+          {
+            "name": "Openur.TagLibSharp",
+            "purl": "",
+            "version": "2.5.0.10"
           },
           {
             "name": "Polly",
             "purl": "",
-            "version": "8.6.6"
+            "version": "8.9.1"
           },
           {
             "name": "Polly.Contrib.WaitAndRetry",
@@ -3925,7 +3935,7 @@
           {
             "name": "Polly.Core",
             "purl": "",
-            "version": "8.6.6"
+            "version": "8.9.1"
           },
           {
             "name": "ReusableTasks",
@@ -3955,17 +3965,17 @@
           {
             "name": "Swashbuckle.AspNetCore.Annotations",
             "purl": "",
-            "version": "9.0.6"
+            "version": "10.3.1"
           },
           {
             "name": "Swashbuckle.AspNetCore.Swagger",
             "purl": "",
-            "version": "9.0.6"
+            "version": "10.3.1"
           },
           {
             "name": "Swashbuckle.AspNetCore.SwaggerGen",
             "purl": "",
-            "version": "9.0.6"
+            "version": "10.3.1"
           },
           {
             "name": "System.ComponentModel",
@@ -3985,7 +3995,7 @@
           {
             "name": "System.Diagnostics.EventLog",
             "purl": "",
-            "version": "8.0.1"
+            "version": "10.0.15"
           },
           {
             "name": "System.Drawing.Common",
@@ -4015,7 +4025,7 @@
           {
             "name": "System.Security.Cryptography.Pkcs",
             "purl": "",
-            "version": "8.0.1"
+            "version": "10.0.15"
           },
           {
             "name": "System.Security.Principal.Windows",
@@ -4025,7 +4035,7 @@
           {
             "name": "System.ServiceProcess.ServiceController",
             "purl": "",
-            "version": "8.0.1"
+            "version": "10.0.15"
           },
           {
             "name": "System.Text.Encoding.CodePages",
@@ -4458,7 +4468,7 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.9.0"
+            "version": "2.10.0"
           },
           {
             "licenses": [
@@ -4615,7 +4625,7 @@
               "MIT"
             ],
             "name": "krb5",
-            "version": "1.22.2_3"
+            "version": "1.22.3"
           },
           {
             "licenses": [
@@ -4805,7 +4815,7 @@
               "BSD3CLAUSE"
             ],
             "name": "libjxl",
-            "version": "0.12.0"
+            "version": "0.12.0_1"
           },
           {
             "licenses": [
@@ -4996,8 +5006,8 @@
           },
           {
             "licenses": [
-              "LGPL3",
-              "GPLv2+"
+              "GPLv2+",
+              "LGPL3"
             ],
             "name": "nettle",
             "version": "3.10.2"
@@ -5021,7 +5031,7 @@
               "BSD3CLAUSE"
             ],
             "name": "openexr",
-            "version": "3.4.17"
+            "version": "3.4.18"
           },
           {
             "licenses": [
@@ -5077,7 +5087,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.8.4"
+            "version": "2.9.2"
           },
           {
             "licenses": [
@@ -5113,7 +5123,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.15"
+            "version": "3.12.16"
           },
           {
             "licenses": [
@@ -5217,8 +5227,8 @@
           },
           {
             "licenses": [
-              "GPLv2",
-              "BSD3CLAUSE"
+              "BSD3CLAUSE",
+              "GPLv2"
             ],
             "name": "zstd",
             "version": "1.5.7_2"
@@ -5306,7 +5316,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 105,
+        "dotnet": 107,
         "freebsd": 160,
         "go": 0,
         "java": 0,
@@ -5315,13 +5325,13 @@
         "python": 3,
         "ruby": 0,
         "rust": 0,
-        "total": 279
+        "total": 281
       }
     },
     "pkg": {
       "app_version": "3.1.6.5079",
       "arch": "amd64",
-      "generated": "2026-11-12T00:46:57Z",
+      "generated": "2026-11-26T09:20:42Z",
       "packages": {
         "dotnet": [
           {
@@ -6230,7 +6240,7 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.9.0"
+            "version": "2.10.0"
           },
           {
             "licenses": [
@@ -6387,7 +6397,7 @@
               "MIT"
             ],
             "name": "krb5",
-            "version": "1.22.2_3"
+            "version": "1.22.3"
           },
           {
             "licenses": [
@@ -6577,7 +6587,7 @@
               "BSD3CLAUSE"
             ],
             "name": "libjxl",
-            "version": "0.12.0"
+            "version": "0.12.0_1"
           },
           {
             "licenses": [
@@ -6768,8 +6778,8 @@
           },
           {
             "licenses": [
-              "LGPL3",
-              "GPLv2+"
+              "GPLv2+",
+              "LGPL3"
             ],
             "name": "nettle",
             "version": "3.10.2"
@@ -6793,7 +6803,7 @@
               "BSD3CLAUSE"
             ],
             "name": "openexr",
-            "version": "3.4.17"
+            "version": "3.4.18"
           },
           {
             "licenses": [
@@ -6849,7 +6859,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.8.4"
+            "version": "2.9.2"
           },
           {
             "licenses": [
@@ -6885,7 +6895,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.15"
+            "version": "3.12.16"
           },
           {
             "licenses": [
@@ -6989,8 +6999,8 @@
           },
           {
             "licenses": [
-              "GPLv2",
-              "BSD3CLAUSE"
+              "BSD3CLAUSE",
+              "GPLv2"
             ],
             "name": "zstd",
             "version": "1.5.7_2"
@@ -7093,7 +7103,7 @@
     "pkg-latest": {
       "app_version": "3.1.6.5079",
       "arch": "amd64",
-      "generated": "2026-11-12T00:46:27Z",
+      "generated": "2026-11-26T09:20:54Z",
       "packages": {
         "dotnet": [
           {
@@ -7922,7 +7932,7 @@
               "BSD2CLAUSE"
             ],
             "name": "aom",
-            "version": "3.15.3"
+            "version": "3.15.3_1"
           },
           {
             "licenses": [
@@ -7951,7 +7961,7 @@
               "MIT"
             ],
             "name": "brotli",
-            "version": "1.2.1,1"
+            "version": "1.2.1_1,1"
           },
           {
             "licenses": [
@@ -8010,7 +8020,7 @@
               "LGPL3+"
             ],
             "name": "ffmpeg",
-            "version": "9.0.2_3,1"
+            "version": "9.0.2_4,1"
           },
           {
             "licenses": [
@@ -8119,7 +8129,8 @@
           },
           {
             "licenses": [
-              "ICU"
+              "BSD-3-Clause",
+              "Unicode-3.0"
             ],
             "name": "icu",
             "version": "76.1,1"
@@ -8145,7 +8156,7 @@
               "ZLIB"
             ],
             "name": "jpeg-turbo",
-            "version": "3.1.4.1"
+            "version": "3.2.1"
           },
           {
             "licenses": [
@@ -8159,7 +8170,7 @@
               "MIT"
             ],
             "name": "krb5",
-            "version": "1.22.2_4"
+            "version": "1.22.3"
           },
           {
             "licenses": [
@@ -8173,14 +8184,14 @@
               "MIT"
             ],
             "name": "lcms2",
-            "version": "2.19.1"
+            "version": "2.20"
           },
           {
             "licenses": [
               "APACHE20"
             ],
             "name": "lerc",
-            "version": "4.2.0"
+            "version": "4.3.0"
           },
           {
             "licenses": [
@@ -8349,7 +8360,7 @@
               "BSD3CLAUSE"
             ],
             "name": "libjxl",
-            "version": "0.12.0"
+            "version": "0.13.0"
           },
           {
             "licenses": [
@@ -8357,7 +8368,7 @@
               "GPLv2"
             ],
             "name": "liblz4",
-            "version": "1.10.0_2,1"
+            "version": "1.11.1,1"
           },
           {
             "licenses": [
@@ -8565,14 +8576,14 @@
               "BSD3CLAUSE"
             ],
             "name": "openexr",
-            "version": "3.4.17"
+            "version": "3.4.18_1"
           },
           {
             "licenses": [
               "BSD2CLAUSE"
             ],
             "name": "openjph",
-            "version": "0.32.0"
+            "version": "0.33.0"
           },
           {
             "licenses": [
@@ -8593,7 +8604,7 @@
               "BSD3CLAUSE"
             ],
             "name": "p11-kit",
-            "version": "0.26.5_1"
+            "version": "0.26.6"
           },
           {
             "licenses": [
@@ -8621,11 +8632,11 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.9.0"
+            "version": "2.9.3"
           },
           {
             "licenses": [
-              "Libpng"
+              "libpng-2.0"
             ],
             "name": "png",
             "version": "1.6.59_1"
@@ -8657,7 +8668,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.15"
+            "version": "3.12.16"
           },
           {
             "licenses": [
